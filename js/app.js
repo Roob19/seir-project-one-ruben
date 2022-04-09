@@ -1,23 +1,71 @@
-const cardColor = ['green', 'red'];
-const staves = ['circle', 'triangle', 'square'];
-const faceValue = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+class Deck {
+    constructor() {
+        this.deck = [];
 
-class CardDeck = {
-    constructor(color, suit, value){
-        this.color = color;
-        this.suit = suit;
-        this.value = value;
+        const cardColor = ['green', 'red'];
+        const staves = ['circles', 'triangles', 'squares'];
+        const faceValue = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        for (let suit in staves) {
+            for (let value in faceValue) {
+                for (let color in cardColor) {
+                    this.deck.push(`${cardColor[color]} ${staves[suit]} ${faceValue[value]}`);
+                }
+            }
+        this.deck.push(`sylop 0`, `sylop 0`);
+        }
     }
-    sylop1 : 0, 
-    sylop2 : 0
+
+    shuffle() {
+        const deck = this.deck;
+        let cardTotal = deck.length;
+        let random;
+
+        while (cardTotal) {
+            random = Math.floor(Math.random() * cardTotal--);
+            [deck[cardTotal], deck[random]] = [deck[random], deck[cardTotal]];
+        }
+        return this;
+    }
+
+    deal() {
+        return this.deck.pop();
+    }
+
+    reset(){
+        this.deck = [];
+
+        const cardColor = ['green', 'red'];
+        const staves = ['circles', 'triangles', 'squares'];
+        const faceValue = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        for (let suit in staves) {
+            for (let value in faceValue) {
+                for (let color in cardColor) {
+                    this.deck.push(`${cardColor[color]} ${staves[suit]} ${faceValue[value]}`);
+                }
+            }
+        this.deck.push(`sylop 0`, `sylop 0`);
+        }
+    }
 }
 
-const testDeck = (color, suit, value) => {
-    value.forEach(element => {
-        
-    });
-}
-console.log(testDeck(cardColor, staves, faceValue));
+const deck1 = new Deck();
+console.log(deck1.deck);
+deck1.shuffle();
+console.log(deck1.deck);
+// deck1.deal();
+// console.log(deck1.deck);
+
+// const testDeck = (colorArray, suitArray, valueArray) => {
+//     value.forEach((element, index)  => {
+//         const card = {
+//             valueArray[index] : staves[index].concat(cardColor[index]),
+//         }
+//         return card;
+//     });
+// }
+// console.log(testDeck(faceValue, staves, cardColor ));
 //     grnCircleOne : 1, 
 //     grnCircleTwo : 2, 
 //     grnCircleThr : 3, 
