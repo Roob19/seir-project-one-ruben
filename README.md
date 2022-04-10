@@ -75,9 +75,9 @@ Spike Phase
 ```
 WINNING A ROUND
 
-To win a round at the end of the three turns, you must have the best hand, according to the hierarchy of the hands detailed in the WINNING HANDS section.
+>To win a round at the end of the three turns, you must have the best hand, according to the hierarchy of the hands detailed in the WINNING HANDS section.
 
-If there is a tie, each tied player must take a card from the draw pile. The player with the closest card to zero wins the round. A positive number always beats an equal negative number. If the two cards have the same value, the two players must both take a new card and repeat this action until the two cards show two different values.
+>If there is a tie, each tied player must take a card from the draw pile. The player with the closest card to zero wins the round. A positive number always beats an equal negative number. If the two cards have the same value, the two players must both take a new card and repeat this action until the two cards show two different values.
 ```
 If you win the round with a hand with a total score close to zero, you win the Hand Pot.
 If you win the round with a hand with a total score of zero, you win both the Main Pot and the Sabacc Pot.
@@ -131,7 +131,7 @@ Single Blind Draw:
 ## A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
 
 >**William Vincent** - https://wsvincent.com/javascript-object-oriented-deck-cards/ 
-**Mike Bostock** - https://bost.ocks.org/mike/shuffle/ 
-**Nulpoints** - https://github.com/Nulpoints 
-**La Tribune de Coruscant** - https://www.youtube.com/watch?v=aym6aGyH4mQ 
-**Wookieepedia** - https://starwars.fandom.com/wiki/Corellian_Spike 
+>**Mike Bostock** - https://bost.ocks.org/mike/shuffle/ 
+>**Nulpoints** - https://github.com/Nulpoints 
+>**La Tribune de Coruscant** - https://www.youtube.com/watch?v=aym6aGyH4mQ 
+>**Wookieepedia** - https://starwars.fandom.com/wiki/Corellian_Spike 
