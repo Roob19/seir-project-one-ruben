@@ -1,12 +1,12 @@
 # seir-project-one-ruben
-###This project is for educational purposes only. 
+### This project is for educational purposes only. 
 
 
-##My first project:
+## My first project:
 
 ![Vandor-1](https://static.wikia.nocookie.net/starwars/images/c/c1/SoloAdaptation3-CoverArt.jpg/revision/latest/scale-to-width-down/500?cb=20190719033302)
 
-#**Corellian Spike**
+# **Corellian Spike**
 
 "Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. "
 The same card game and variation where `Han Solo` won the `Milenium Falcon` from `Lando Calrissian` on Vandor-1. 
@@ -40,11 +40,12 @@ Setup:
         During the game, discarded cards will form the discard pile.
         A betting phase begins with the player on the dealer’s left.
 ```
-GAME PHASES
+GAME PHASES ;
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
+```     
         Draw Phase
             The player on the dealer’s left always goes first.
-```
+
             During your turn you can:
                     1. Calculate your hand. Green cards are positive and red cards are negative. Keep in mind that you must reach a value of zero.
                     2. Choose one of these options:
@@ -78,7 +79,7 @@ If you win the round with a hand with a total score close to zero, you win the H
 If you win the round with a hand with a total score of zero, you win both the Main Pot and the Sabacc Pot.
 
 WINNING HANDS
-
+```
 `Pure Sabacc: 
     Zero with the two Sylops. `;
 `Full Sabacc: 
@@ -119,10 +120,11 @@ WINNING HANDS
     The hand that is closest to zero wins.`;
 `Single Blind Draw: 
     If players are still tied after considering all the previous hands, all tied players draw a new card each. The player whose card is the closest to zero wins. A positive number beats a negative one. If there’s still a tie, the tied players must draw again until there is a winner.`;
-;
-;
-;
-##A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
+```
+
+
+
+## A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
 
 William Vincent - https://wsvincent.com/javascript-object-oriented-deck-cards/ ;
 Mike Bostock - https://bost.ocks.org/mike/shuffle/ ;
