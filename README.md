@@ -4,13 +4,15 @@
 
 ##My first project:
 
+![Vandor-1](SoloAdaptation3-CoverArt.webp)
+
 #**Corellian Spike**
 
-Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
-The same card game and variation where Han Solo won the Milenium Falcon from Lando Calrissian on Vandor-1. 
+"Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. "
+The same card game and variation where `Han Solo` won the `Milenium Falcon` from `Lando Calrissian` on Vandor-1. 
 
 Corellian Spike uses a 62-card deck and two six-sided dice. 
-    The deck comprises of: 
+    "The deck comprises of: "
 -    10 green, circle suited cards, with values of 1-10. 
 -    10 green, triangle suited cards, with values of 1-10. 
 -    10 green, square suited cards, with values of 1-10. 
@@ -24,6 +26,7 @@ Corellian Spike uses a 62-card deck and two six-sided dice.
 
 The objective of the game is to have a hand where the total value is as close to zero as possible. 
 There are three rounds to a game. 
+```
 Setup: 
     Game starts with each player contributing two credits/chips to the game pot and one credit to the sabacc pot. 
         Sabacc pot can only be won if the winning hand is === 0. 
@@ -41,7 +44,8 @@ GAME PHASES
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
         Draw Phase
             The player on the dealer’s left always goes first.
-```                During your turn you can:
+```
+            During your turn you can:
                     1. Calculate your hand. Green cards are positive and red cards are negative. Keep in mind that you must reach a value of zero.
                     2. Choose one of these options:
                         a. Take the top card from the Draw Pile. This will cost you 1 credit.
@@ -58,6 +62,7 @@ GAME PHASES
                 Raise: To increase the bet amount.
                 Stand: To continue the game without betting any further. This action can be taken by any player only if he has already matched the biggest bet on the table or if no one has yet opened the betting round.
                 Fold: To leave the ongoing game by surrendering your cards to the dealer and wait for the next round to start.
+```
         Spike Phase
             Once the betting phase is over, the dealer rolls the dice. If the symbols are different, nothing happens.
             If the symbols match, players must remember the number of cards they have in their hands before discarding them. Then, the dealer gives each player the same number of cards they just had with new cards from the draw pile.
@@ -74,53 +79,53 @@ If you win the round with a hand with a total score of zero, you win both the Ma
 
 WINNING HANDS
 
-Pure Sabacc: 
-    Zero with the two Sylops. 
-Full Sabacc: 
-    Zero with two +10 and two -10 (four of a kind, 10s) and the Sylop. 
-Fleet: 
-    Zero with a four of a kind (except10s) and a Sylop. The four of a kind closest to zero wins if there are several Fleet. 
-Yee-Haa: 
-    Zero with a pair and a Sylop. If there are several Yee-Haa, the pair that is closest to zero wins. 
-Rhylet: 
-    Zero with positive three of a kind and a negative pair or a negative three of a kind and a positive pair. The three of a kind closest to zero wins if there are several Rhylet.
-Squadron: 
-    Zero with a four of a kind. The four of a kind closest to zero wins if there are several Squadron.
-Gee Whiz: 
-    Four cards in sequential order from 1 to 4 and a 10 of the opposite sign.
-Straight Khyron (or Straight Staves/Suits): 
-    Four cards in sequential order with a total score of zero. The hand with the first card which is the closest to zero wins if there are several Straight Khyron.
-Bantha’s Wild: 
-    Zero with a three of a kind. The three of a kind closest to zero wins if there are several Bantha’s Wild.
-Rule of Two: 
-    Zero with two pairs. The pair closest to zero wins if there are several Rule of Two.
-Sabacc (with a pair): 
-    Hand equal to zero with a pair. The pair closest to zero wins if there are several Sabacc with pairs.
-Sabacc with highest value single card: 
-    Zero with the highest positive card. If the total of positive cards is the same, the hand with the highest positive single card wins.
-Sabacc with highest value cards: 
-    Zero with the highest total of positive cards. The number of cards is the same, the total of positive cards determines the best hand. Here, the first hand (7-3=10) beats the second one (5+1=6).
-Sabacc with most cards: 
-    If there are several hands equal to zero, the hand with most cards wins.
-Nulrhek with highest value single card: 
-    If two players have the same total, and if the total of positive cards is the same, the hand with the highest positive single card wins.
-Nulrhek with highest value cards: 
-    If two players have the same total and that their number of cards is the same, the total of positive cards determines the best hand.
-Nulrhek with most cards: 
-    If two players have the same total, the hand with most cards wins.
-Nulrhek with a positive score: 
-    The closest to zero with a positive score will always win against a negative score of the same value.
-Nulrhek: 
-    The hand that is closest to zero wins.
-Single Blind Draw: 
-    If players are still tied after considering all the previous hands, all tied players draw a new card each. The player whose card is the closest to zero wins. A positive number beats a negative one. If there’s still a tie, the tied players must draw again until there is a winner.
+`Pure Sabacc: 
+    Zero with the two Sylops. `
+`Full Sabacc: 
+    Zero with two +10 and two -10 (four of a kind, 10s) and the Sylop. `
+`Fleet: 
+    Zero with a four of a kind (except10s) and a Sylop. The four of a kind closest to zero wins if there are several Fleet. `
+`Yee-Haa: 
+    Zero with a pair and a Sylop. If there are several Yee-Haa, the pair that is closest to zero wins. `
+`Rhylet: 
+    Zero with positive three of a kind and a negative pair or a negative three of a kind and a positive pair. The three of a kind closest to zero wins if there are several Rhylet.`
+`Squadron: 
+    Zero with a four of a kind. The four of a kind closest to zero wins if there are several Squadron.`
+`Gee Whiz: 
+    Four cards in sequential order from 1 to 4 and a 10 of the opposite sign.`
+`Straight Khyron (or Straight Staves/Suits): 
+    Four cards in sequential order with a total score of zero. The hand with the first card which is the closest to zero wins if there are several Straight Khyron.`
+`Bantha’s Wild: 
+    Zero with a three of a kind. The three of a kind closest to zero wins if there are several Bantha’s Wild.`
+`Rule of Two: 
+    Zero with two pairs. The pair closest to zero wins if there are several Rule of Two.`
+`Sabacc (with a pair): 
+    Hand equal to zero with a pair. The pair closest to zero wins if there are several Sabacc with pairs.`
+`Sabacc with highest value single card: 
+    Zero with the highest positive card. If the total of positive cards is the same, the hand with the highest positive single card wins.`
+`Sabacc with highest value cards: 
+    Zero with the highest total of positive cards. The number of cards is the same, the total of positive cards determines the best hand. Here, the first hand (7-3=10) beats the second one (5+1=6).`
+`Sabacc with most cards: 
+    If there are several hands equal to zero, the hand with most cards wins.`
+`Nulrhek with highest value single card: 
+    If two players have the same total, and if the total of positive cards is the same, the hand with the highest positive single card wins.`
+`Nulrhek with highest value cards: 
+    If two players have the same total and that their number of cards is the same, the total of positive cards determines the best hand.`
+`Nulrhek with most cards: 
+    If two players have the same total, the hand with most cards wins.`
+`Nulrhek with a positive score: 
+    The closest to zero with a positive score will always win against a negative score of the same value.`
+`Nulrhek: 
+    The hand that is closest to zero wins.`
+`Single Blind Draw: 
+    If players are still tied after considering all the previous hands, all tied players draw a new card each. The player whose card is the closest to zero wins. A positive number beats a negative one. If there’s still a tie, the tied players must draw again until there is a winner.`
 
 
 
-A HUGE thanks to the contributors and creators of the reference material used in the production of this project: 
+#A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
 
-William Vincent - https://wsvincent.com/javascript-object-oriented-deck-cards/
-Mike Bostock - https://bost.ocks.org/mike/shuffle/
-Nulpoints - https://github.com/Nulpoints
-La Tribune de Coruscant - https://www.youtube.com/watch?v=aym6aGyH4mQ
-Wookieepedia - https://starwars.fandom.com/wiki/Corellian_Spike
+"William Vincent - https://wsvincent.com/javascript-object-oriented-deck-cards/"
+"Mike Bostock - https://bost.ocks.org/mike/shuffle/"
+"Nulpoints - https://github.com/Nulpoints"
+"La Tribune de Coruscant - https://www.youtube.com/watch?v=aym6aGyH4mQ"
+"Wookieepedia - https://starwars.fandom.com/wiki/Corellian_Spike"
