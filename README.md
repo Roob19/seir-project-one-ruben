@@ -40,7 +40,8 @@ Setup:
         During the game, discarded cards will form the discard pile.
         A betting phase begins with the player on the dealer’s left.
 ```
-GAME PHASES ;
+GAME PHASES 
+
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
 ```     
 Draw Phase
@@ -57,12 +58,14 @@ Draw Phase
             3. End your turn. Then the player on your left can play.
                         Note: There must always be at least one face up card. If you happen to take this card, the dealer must place the top card from the draw pile face up. 
 ```
+```
 Betting Phase
     Beginning with the player to the left of the dealer, players each can call, raise, stand or fold when it’s their turn to bet.
         Call: To match the amount of the highest bet on the table.
         Raise: To increase the bet amount.
         Stand: To continue the game without betting any further. This action can be taken by any player only if he has already matched the biggest bet on the table or if no one has yet opened the betting round.
         Fold: To leave the ongoing game by surrendering your cards to the dealer and wait for the next round to start.
+```
 ```
 Spike Phase
     Once the betting phase is over, the dealer rolls the dice. If the symbols are different, nothing happens.
@@ -74,10 +77,10 @@ WINNING A ROUND
 To win a round at the end of the three turns, you must have the best hand, according to the hierarchy of the hands detailed in the WINNING HANDS section.
 
 If there is a tie, each tied player must take a card from the draw pile. The player with the closest card to zero wins the round. A positive number always beats an equal negative number. If the two cards have the same value, the two players must both take a new card and repeat this action until the two cards show two different values.
-
+```
 If you win the round with a hand with a total score close to zero, you win the Hand Pot.
 If you win the round with a hand with a total score of zero, you win both the Main Pot and the Sabacc Pot.
-
+```
 WINNING HANDS
 ```
 Pure Sabacc: 
