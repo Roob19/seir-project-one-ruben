@@ -4,7 +4,7 @@
 
 ##My first project:
 
-![Vandor-1](SoloAdaptation3-CoverArt.webp)
+![Vandor-1](https://static.wikia.nocookie.net/starwars/images/c/c1/SoloAdaptation3-CoverArt.jpg/revision/latest/scale-to-width-down/500?cb=20190719033302)
 
 #**Corellian Spike**
 
@@ -39,7 +39,7 @@ Setup:
         - Take the top card from the draw pile and place it face up next to the deck face up.
         During the game, discarded cards will form the discard pile.
         A betting phase begins with the player on the dealer’s left.
-
+```
 GAME PHASES
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
         Draw Phase
@@ -80,52 +80,52 @@ If you win the round with a hand with a total score of zero, you win both the Ma
 WINNING HANDS
 
 `Pure Sabacc: 
-    Zero with the two Sylops. `
+    Zero with the two Sylops. `;
 `Full Sabacc: 
-    Zero with two +10 and two -10 (four of a kind, 10s) and the Sylop. `
+    Zero with two +10 and two -10 (four of a kind, 10s) and the Sylop. `;
 `Fleet: 
-    Zero with a four of a kind (except10s) and a Sylop. The four of a kind closest to zero wins if there are several Fleet. `
+    Zero with a four of a kind (except10s) and a Sylop. The four of a kind closest to zero wins if there are several Fleet. `;
 `Yee-Haa: 
-    Zero with a pair and a Sylop. If there are several Yee-Haa, the pair that is closest to zero wins. `
+    Zero with a pair and a Sylop. If there are several Yee-Haa, the pair that is closest to zero wins. `;
 `Rhylet: 
-    Zero with positive three of a kind and a negative pair or a negative three of a kind and a positive pair. The three of a kind closest to zero wins if there are several Rhylet.`
+    Zero with positive three of a kind and a negative pair or a negative three of a kind and a positive pair. The three of a kind closest to zero wins if there are several Rhylet.`;
 `Squadron: 
-    Zero with a four of a kind. The four of a kind closest to zero wins if there are several Squadron.`
+    Zero with a four of a kind. The four of a kind closest to zero wins if there are several Squadron.`;
 `Gee Whiz: 
-    Four cards in sequential order from 1 to 4 and a 10 of the opposite sign.`
+    Four cards in sequential order from 1 to 4 and a 10 of the opposite sign.`;
 `Straight Khyron (or Straight Staves/Suits): 
-    Four cards in sequential order with a total score of zero. The hand with the first card which is the closest to zero wins if there are several Straight Khyron.`
+    Four cards in sequential order with a total score of zero. The hand with the first card which is the closest to zero wins if there are several Straight Khyron.`;
 `Bantha’s Wild: 
-    Zero with a three of a kind. The three of a kind closest to zero wins if there are several Bantha’s Wild.`
+    Zero with a three of a kind. The three of a kind closest to zero wins if there are several Bantha’s Wild.`;
 `Rule of Two: 
-    Zero with two pairs. The pair closest to zero wins if there are several Rule of Two.`
+    Zero with two pairs. The pair closest to zero wins if there are several Rule of Two.`;
 `Sabacc (with a pair): 
-    Hand equal to zero with a pair. The pair closest to zero wins if there are several Sabacc with pairs.`
+    Hand equal to zero with a pair. The pair closest to zero wins if there are several Sabacc with pairs.`;
 `Sabacc with highest value single card: 
-    Zero with the highest positive card. If the total of positive cards is the same, the hand with the highest positive single card wins.`
+    Zero with the highest positive card. If the total of positive cards is the same, the hand with the highest positive single card wins.`;
 `Sabacc with highest value cards: 
-    Zero with the highest total of positive cards. The number of cards is the same, the total of positive cards determines the best hand. Here, the first hand (7-3=10) beats the second one (5+1=6).`
+    Zero with the highest total of positive cards. The number of cards is the same, the total of positive cards determines the best hand. Here, the first hand (7-3=10) beats the second one (5+1=6).`;
 `Sabacc with most cards: 
-    If there are several hands equal to zero, the hand with most cards wins.`
+    If there are several hands equal to zero, the hand with most cards wins.`;
 `Nulrhek with highest value single card: 
-    If two players have the same total, and if the total of positive cards is the same, the hand with the highest positive single card wins.`
+    If two players have the same total, and if the total of positive cards is the same, the hand with the highest positive single card wins.`;
 `Nulrhek with highest value cards: 
-    If two players have the same total and that their number of cards is the same, the total of positive cards determines the best hand.`
+    If two players have the same total and that their number of cards is the same, the total of positive cards determines the best hand.`;
 `Nulrhek with most cards: 
-    If two players have the same total, the hand with most cards wins.`
+    If two players have the same total, the hand with most cards wins.`;
 `Nulrhek with a positive score: 
-    The closest to zero with a positive score will always win against a negative score of the same value.`
+    The closest to zero with a positive score will always win against a negative score of the same value.`;
 `Nulrhek: 
-    The hand that is closest to zero wins.`
+    The hand that is closest to zero wins.`;
 `Single Blind Draw: 
-    If players are still tied after considering all the previous hands, all tied players draw a new card each. The player whose card is the closest to zero wins. A positive number beats a negative one. If there’s still a tie, the tied players must draw again until there is a winner.`
+    If players are still tied after considering all the previous hands, all tied players draw a new card each. The player whose card is the closest to zero wins. A positive number beats a negative one. If there’s still a tie, the tied players must draw again until there is a winner.`;
+;
+;
+;
+##A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
 
-
-
-#A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
-
-"William Vincent - https://wsvincent.com/javascript-object-oriented-deck-cards/"
-"Mike Bostock - https://bost.ocks.org/mike/shuffle/"
-"Nulpoints - https://github.com/Nulpoints"
-"La Tribune de Coruscant - https://www.youtube.com/watch?v=aym6aGyH4mQ"
-"Wookieepedia - https://starwars.fandom.com/wiki/Corellian_Spike"
+William Vincent - https://wsvincent.com/javascript-object-oriented-deck-cards/ ;
+Mike Bostock - https://bost.ocks.org/mike/shuffle/ ;
+Nulpoints - https://github.com/Nulpoints ;
+La Tribune de Coruscant - https://www.youtube.com/watch?v=aym6aGyH4mQ ;
+Wookieepedia - https://starwars.fandom.com/wiki/Corellian_Spike ;
