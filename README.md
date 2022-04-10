@@ -1,5 +1,5 @@
 # seir-project-one-ruben
-### This project is for educational purposes only. 
+### This project is for educational purposes only and is a work in progress. 
 
 
 ## My first project:
@@ -145,7 +145,7 @@ Single Blind Draw:
 
 
 
-## A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
+## A **HUGE** thanks to the contributors and creators of the reference material used to make this project possible: 
 
 >**Suresh Sigera** - https://generalassemb.ly/instructors/suresh-sigera/19888
 
@@ -160,3 +160,7 @@ Single Blind Draw:
 >**La Tribune de Coruscant** - https://www.youtube.com/watch?v=aym6aGyH4mQ 
 
 >**Wookieepedia** - https://starwars.fandom.com/wiki/Corellian_Spike 
+
+>**General Assembly** - https://generalassemb.ly/
+
+>**The city of Rancho Cordova** - https://www.cityofranchocordova.org/
