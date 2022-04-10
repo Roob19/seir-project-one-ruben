@@ -41,7 +41,7 @@ Setup:
         During the game, discarded cards will form the discard pile.
         A betting phase begins with the player on the dealer’s left.
 ```
-GAME PHASES 
+## GAME PHASES 
 
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
 ```     
@@ -80,7 +80,7 @@ Spike Phase
     Then, the dealer gives each player the same number of cards they just had with new cards from the draw pile.
     These three phases (Draw, Betting and Spike) must be played again twice, making the two final turns.
 ```
-WINNING A ROUND
+## WINNING A ROUND
 
 >To win a round at the end of the three turns, you must have the best hand, according to the hierarchy of the hands detailed in the WINNING HANDS section.
 
@@ -89,7 +89,7 @@ WINNING A ROUND
 If you win the round with a hand with a total score close to zero, you win the Hand Pot.
 If you win the round with a hand with a total score of zero, you win both the Main Pot and the Sabacc Pot.
 ```
-WINNING HANDS
+## WINNING HANDS
 ```
 Pure Sabacc: 
     Zero with the two Sylops. 
@@ -121,7 +121,8 @@ Sabacc with highest value single card:
         the hand with the highest positive single card wins.
 Sabacc with highest value cards: 
     Zero with the highest total of positive cards. The number of cards is the same, 
-        the total of positive cards determines the best hand. Here, the first hand (7-3=10) beats the second one (5+1=6).
+        the total of positive cards determines the best hand. 
+            Here, the first hand (7-3=10) beats the second one (5+1=6).
 Sabacc with most cards: 
     If there are several hands equal to zero, the hand with most cards wins.
 Nulrhek with highest value single card: 
