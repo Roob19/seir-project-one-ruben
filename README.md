@@ -1,24 +1,25 @@
 # seir-project-one-ruben
-My first project:
+This project is for educational purposes only. 
 
-This project is for eduactional purposes only. 
+
+My first project:
 
 Corellian Spike 
 
 Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
 The same card game and variation where Han Solo won the Milenium Falcon from Lando Calrissian on Vandor-1. 
 
-`Corellian Spike uses a 62-card deck and two six-sided dice. 
+Corellian Spike uses a 62-card deck and two six-sided dice. 
 The deck comprises of: 
-    10 green, circle suited cards, with values of 1-10. 
-    10 green, triangle suited cards, with values of 1-10. 
-    10 green, square suited cards, with values of 1-10. 
-    10 red, circle suited cards, with values of -10 to -1. 
-    10 red, triangle suited cards, with values of -10 to -1. 
-    10 red, square suited cards, with values of -10 to -1. 
-    2 uncolored cards, with the value of 0, Sylop(s). 
-    -
-    The 2d6 are identical and comprise of six glyfs.`
+-    10 green, circle suited cards, with values of 1-10. 
+-    10 green, triangle suited cards, with values of 1-10. 
+-    10 green, square suited cards, with values of 1-10. 
+-    10 red, circle suited cards, with values of -10 to -1. 
+-    10 red, triangle suited cards, with values of -10 to -1. 
+-    10 red, square suited cards, with values of -10 to -1. 
+-    2 uncolored cards, with the value of 0, Sylop(s). 
+-    
+-    The 2d6 are identical and comprise of six glyfs.
 
 
 The objective of the game is to have a hand where the total value is as close to zero as possible. 
@@ -35,7 +36,7 @@ Setup:
         - Take the top card from the draw pile and place it face up next to the deck face up.
         During the game, discarded cards will form the discard pile.
         A betting phase begins with the player on the dealer’s left.
-    
+
 GAME PHASES
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
         Draw Phase
