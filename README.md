@@ -25,6 +25,7 @@ Corellian Spike uses a 62-card deck and two six-sided dice.
 
 
 The objective of the game is to have a hand where the total value is as close to zero as possible. 
+
 There are three rounds to a game. 
 ```
 Setup: 
@@ -129,9 +130,9 @@ Single Blind Draw:
 
 ## A **HUGE** thanks to the contributors and creators of the reference material used in the production of this project: 
 ```
-William Vincent - https://wsvincent.com/javascript-object-oriented-deck-cards/ 
-Mike Bostock - https://bost.ocks.org/mike/shuffle/ 
-Nulpoints - https://github.com/Nulpoints 
-La Tribune de Coruscant - https://www.youtube.com/watch?v=aym6aGyH4mQ 
-Wookieepedia - https://starwars.fandom.com/wiki/Corellian_Spike 
+**William Vincent** - https://wsvincent.com/javascript-object-oriented-deck-cards/ 
+**Mike Bostock** - https://bost.ocks.org/mike/shuffle/ 
+**Nulpoints** - https://github.com/Nulpoints 
+**La Tribune de Coruscant** - https://www.youtube.com/watch?v=aym6aGyH4mQ 
+**Wookieepedia** - https://starwars.fandom.com/wiki/Corellian_Spike 
 ```
