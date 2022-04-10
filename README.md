@@ -67,7 +67,7 @@ GAME PHASES
             Once the betting phase is over, the dealer rolls the dice. If the symbols are different, nothing happens.
             If the symbols match, players must remember the number of cards they have in their hands before discarding them. Then, the dealer gives each player the same number of cards they just had with new cards from the draw pile.
             These three phases (Draw, Betting and Spike) must be played again twice, making the two final turns.
-
+```
 WINNING A ROUND
 
 To win a round at the end of the three turns, you must have the best hand, according to the hierarchy of the hands detailed in the WINNING HANDS section.
