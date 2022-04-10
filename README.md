@@ -1,16 +1,16 @@
 # seir-project-one-ruben
-This project is for educational purposes only. 
+###This project is for educational purposes only. 
 
 
-My first project:
+##My first project:
 
-Corellian Spike 
+#**Corellian Spike**
 
 Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
 The same card game and variation where Han Solo won the Milenium Falcon from Lando Calrissian on Vandor-1. 
 
 Corellian Spike uses a 62-card deck and two six-sided dice. 
-The deck comprises of: 
+    The deck comprises of: 
 -    10 green, circle suited cards, with values of 1-10. 
 -    10 green, triangle suited cards, with values of 1-10. 
 -    10 green, square suited cards, with values of 1-10. 
@@ -18,7 +18,7 @@ The deck comprises of:
 -    10 red, triangle suited cards, with values of -10 to -1. 
 -    10 red, square suited cards, with values of -10 to -1. 
 -    2 uncolored cards, with the value of 0, Sylop(s). 
--    
+
 -    The 2d6 are identical and comprise of six glyfs.
 
 
@@ -41,7 +41,7 @@ GAME PHASES
     A Corellian Spike round is played in three turns. Each turn consists of three phases:
         Draw Phase
             The player on the dealer’s left always goes first.
-                During your turn you can:
+```                During your turn you can:
                     1. Calculate your hand. Green cards are positive and red cards are negative. Keep in mind that you must reach a value of zero.
                     2. Choose one of these options:
                         a. Take the top card from the Draw Pile. This will cost you 1 credit.
@@ -50,7 +50,7 @@ GAME PHASES
                             d. Discard one of your cards and trade it for the face up card.
                             e. Do nothing. This is known as “standing”, which means that you do not want a new card.
                     3. End your turn. Then the player on your left can play.
-                                Note: There must always be at least one face up card. If you happen to take this card, the dealer must place the top card from the draw pile face up.
+                                Note: There must always be at least one face up card. If you happen to take this card, the dealer must place the top card from the draw pile face up. ```
         Betting Phase
             Beginning with the player to the left of the dealer, players each can call, raise, stand or fold when it’s their turn to bet.
                 Call: To match the amount of the highest bet on the table.
