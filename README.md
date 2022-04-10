@@ -17,10 +17,10 @@ The deck comprises of:
     10 red, triangle suited cards, with values of -10 to -1. 
     10 red, square suited cards, with values of -10 to -1. 
     2 uncolored cards, with the value of 0, Sylop(s). 
-
+    -
     The 2d6 are identical and comprise of six glyfs.`
 
-    
+
 The objective of the game is to have a hand where the total value is as close to zero as possible. 
 There are three rounds to a game. 
 Setup: 
