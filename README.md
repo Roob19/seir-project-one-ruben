@@ -50,7 +50,8 @@ GAME PHASES
                             d. Discard one of your cards and trade it for the face up card.
                             e. Do nothing. This is known as “standing”, which means that you do not want a new card.
                     3. End your turn. Then the player on your left can play.
-                                Note: There must always be at least one face up card. If you happen to take this card, the dealer must place the top card from the draw pile face up. ```
+                                Note: There must always be at least one face up card. If you happen to take this card, the dealer must place the top card from the draw pile face up. 
+```
         Betting Phase
             Beginning with the player to the left of the dealer, players each can call, raise, stand or fold when it’s their turn to bet.
                 Call: To match the amount of the highest bet on the table.
