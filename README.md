@@ -8,7 +8,7 @@ Corellian Spike
 Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
 The same card game and variation where Han Solo won the Milenium Falcon from Lando Calrissian on Vandor-1. 
 
-Corellian Spike uses a 62-card deck and two six-sided dice. 
+`Corellian Spike uses a 62-card deck and two six-sided dice. 
 The deck comprises of: 
     10 green, circle suited cards, with values of 1-10. 
     10 green, triangle suited cards, with values of 1-10. 
@@ -18,7 +18,7 @@ The deck comprises of:
     10 red, square suited cards, with values of -10 to -1. 
     2 uncolored cards, with the value of 0, Sylop(s). 
 
-    The 2d6 are identical and comprise of six glyfs.
+    The 2d6 are identical and comprise of six glyfs.`
 
     
 The objective of the game is to have a hand where the total value is as close to zero as possible. 
