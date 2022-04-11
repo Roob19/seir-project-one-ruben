@@ -57,13 +57,6 @@ class Deck {
     }
 }
 
-const deck1 = new Deck();
-// console.log(deck1.deck);
-deck1.shuffle();
-// console.log(deck1.deck);
-// deck1.deal();
-// console.log(deck1.deck);
-
 class Player {
     constructor(){
         this.player = {
@@ -78,3 +71,10 @@ class Player {
     }
 }
 
+const initialize = () => {
+    const deck1 = new Deck();
+    deck1.shuffle();
+    const compPlayer = new Player();
+    const playerOne = new Player();
+    
+}
