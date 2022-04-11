@@ -57,6 +57,9 @@ class Deck {
     }
 }
 
+const discardPile = [];
+// $("#discardPile")
+
 class Player {
     constructor(){
         this.player = {
@@ -76,5 +79,6 @@ const initialize = () => {
     deck1.shuffle();
     const compPlayer = new Player();
     const playerOne = new Player();
-    
+
 }
+
