@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100%;
+}
+section{
+    display: grid;
+    justify-content: space-between;
+}
+p{
+    border: 1px solid #000;
+    display: flex;
+}
+#dealer{
+    display: flex;
+    border: 1px solid #000;
+    
+}
+#player{
+    display: flex;
+    border: 1px solid #000;
+    justify-content: flex-end;
+}
+.card{
+    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
+    border-radius: 0.20em;
+}
+.chips{
+    order: 3;
+}
+.token{
+    order: -1;
+    border-radius: 50%;
+}
+.pile{
+    display: inline-block;
+    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
+    border-radius: 0.20em;
+    justify-content: 
+}
