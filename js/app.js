@@ -53,7 +53,7 @@ class Deck {
                 this.deck.push(`red ${staves[suit]} ${redFaceValue[value]}`);
             }
         }
-        this.deck.push(`sylop 0`, `sylop 0`);
+        this.deck.push(`gold sylop 0`, `gold sylop 0`);
     }
 }
 
@@ -63,3 +63,17 @@ deck1.shuffle();
 console.log(deck1.deck);
 deck1.deal();
 console.log(deck1.deck);
+
+class Player {
+    constructor(){
+        this.player = {
+            cardA : null, 
+            cardB : null, 
+            cardC : null, 
+            cardD : null,
+            cardE : null, 
+            credBalance : 54, 
+            dealerToken : false
+        }
+    }
+}

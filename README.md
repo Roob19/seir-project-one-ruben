@@ -8,7 +8,8 @@
 
 # **Corellian Spike**
 
-"Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. "
+Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
+
 The same card game and variation where `Han Solo` won the `Milenium Falcon` from `Lando Calrissian` on Vandor-1. 
 
 Corellian Spike uses a 62-card deck and two six-sided dice. 
