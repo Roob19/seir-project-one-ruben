@@ -16,7 +16,7 @@ class Deck {
                 this.deck.push(`red ${staves[suit]} ${redFaceValue[value]}`);//all three suits given negative values and 'red' added to name
             }
         }
-        this.deck.push(`sylop 0`, `sylop 0`);//only two sylops of 0 value and of no suit per deck, 62 cards in total
+        this.deck.push(`gold sylop 0`, `gold sylop 0`);//only two sylops of 0 value and of no suit per deck, 62 cards in total
         
     }
     //shuffles created deck
@@ -42,23 +42,20 @@ class Deck {
         const staves = ['circles', 'triangles', 'squares'];
         const greenFaceValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         const redFaceValue = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1];
-
+        
         for (let suit in staves) {
             for (let value in greenFaceValue) {
-                this.deck.push(`green ${staves[suit]} ${greenFaceValue[value]}`);
+                this.deck.push(`green ${staves[suit]} ${greenFaceValue[value]}`);//assign positive values to green
             }
         }
         for (let suit in staves) {
             for (let value in redFaceValue) {
-                this.deck.push(`red ${staves[suit]} ${redFaceValue[value]}`);
+                this.deck.push(`red ${staves[suit]} ${redFaceValue[value]}`);//asign negative numbers to red
             }
         }
         this.deck.push(`gold sylop 0`, `gold sylop 0`);
     }
 }
-
-const discardPile = [];
-// $("#discardPile")
 
 class Player {
     constructor(){
@@ -74,11 +71,30 @@ class Player {
     }
 }
 
+let playerTurn = 0;
+
 const initialize = () => {
     const deck1 = new Deck();
     deck1.shuffle();
     const compPlayer = new Player();
     const playerOne = new Player();
 
+    $("#pCardA").add.classList(deck1[deck1.length]);
+    deal(deck1);
+    $("#dCardA").add.classList(deck1[deck1.lenth]);
+    deal(deck1);
 }
 
+const discardPile = [];
+if (discardPile[0] != null){
+    $("#discardPile").add.classList(discardPile[0]);
+}
+
+
+const deck2 = new Deck();
+console.log(deck2.deck);
+deck2.shuffle();
+
+//removing spaces from cards in Deck to use as classes in CSS to diplay card images
+let result = deck2.deck.map(element => element.replace(/ /g, ''));
+console.log(result);

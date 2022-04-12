@@ -9,9 +9,7 @@ section{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    /* justify-content: space-between; */
     flex-direction: row;
-    /* align-items: center; */
 }
 p{
     border: 1px solid #000;
@@ -48,7 +46,8 @@ p{
 }
 #drawPile{
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 3;
+    background-image: url("../images/Back.png");
 }
 #spikePile{
     grid-column: 2;
