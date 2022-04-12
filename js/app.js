@@ -1,6 +1,6 @@
 class Deck {
     constructor() {
-        this.deck = [];
+        this.deck = [].map(element => element.replace(/ /g, ''));;
 
         const staves = ['circles', 'triangles', 'squares'];//three suits of green and red, 60 cards
         const greenFaceValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];//all green cards are of positive values, 30 green cards
@@ -17,7 +17,6 @@ class Deck {
             }
         }
         this.deck.push(`gold sylop 0`, `gold sylop 0`);//only two sylops of 0 value and of no suit per deck, 62 cards in total
-        
     }
     //shuffles created deck
     shuffle() {
@@ -79,32 +78,44 @@ const initialize = () => {
     const compPlayer = new Player();
     const playerOne = new Player();
 
-    $("#pCardA").add.classList(deck1[deck1.length]);
-    deal(deck1);
-    $("#dCardA").add.classList(deck1[deck1.lenth]);
-    deal(deck1);
+    compPlayer.cardA = deck1[deck1.length];
+    $("#pCardA").addClass(compPlayer.cardA);
+    deck1.deal();
+    playerOne.cardA = deck1[deck1.length];
+    $("#dCardA").addClass(playerOne.cardA);
+    deck1.deal();
+
+    $("#dCredBalance").text(`$ ${compPlayer.credBalance}`);
+    $("#pCredBalance").text(`$ ${playerOne.credBalance}`);
+
+    console.log(deck1.deck);
+    console.log(compPlayer.cardA);
+    console.log(playerOne.cardA);
+    console.log(compPlayer.credBalance);
+    console.log(playerOne.credBalance);
 }
 
 const discardPile = [];
 if (discardPile[0] != null){
-    $("#discardPile").add.classList(discardPile[discardPile.length]);
+    $("#discardPile").addClass(discardPile[discardPile.length]);
 }
 
 
-const deck2 = new Deck();
-console.log(deck2.deck);
-deck2.shuffle();
+// const deck2 = new Deck();
+// console.log(deck2.deck);
+// deck2.shuffle();
 
-//removing spaces from cards in Deck to use as classes in CSS to diplay card images
-let cardStringConverter = deck2.deck.map(element => element.replace(/ /g, ''));
-console.log(cardStringConverter);
+// //removing spaces from cards in Deck to use as classes in CSS to diplay card images
+// let cardStringConverter = deck2.deck.map(element => element.replace(/ /g, ''));
+// console.log(cardStringConverter);
 
 //dice roll attempt
 const rollDice = () => {
     const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
     let randomA = Math.floor(Math.random() * diceSides.length);
-    $("#dice1").classList.add(diceSides[randomA]);
+    $("#dice1").addClass(diceSides[randomA]);
     let randomB = Math.floor(Math.random() * diceSides.length);
-    $("#dice2").classList.add(diceSides[randomB]);
+    $("#dice2").addClass(diceSides[randomB]);
 }
 rollDice();
+initialize();
