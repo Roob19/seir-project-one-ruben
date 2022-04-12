@@ -305,3 +305,21 @@ p{
 .card.goldsylop0{
     content: url("../images/0\ Sylop.png");
 }
+.dice.sideOne{
+    content: url("../images/Spike\ Die\ Side\ 1.png");
+}
+.dice.sideTwo{
+    content: url("../images/Spike\ Die\ Side\ 2.png");
+}
+.dice.sideThree{
+    content: url("../images/Spike\ Die\ Side\ 3.png");
+}
+.dice.sideFour{
+    content: url("../images/Spike\ Die\ Side\ 4.png");
+}
+.dice.sideFive{
+    content: url("../images/Spike\ Die\ Side\ 5.png");
+}
+.dice.sideSix{
+    content: url("../images/Spike\ Die\ Side\ 6.png");
+}
