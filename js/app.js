@@ -98,3 +98,13 @@ deck2.shuffle();
 //removing spaces from cards in Deck to use as classes in CSS to diplay card images
 let cardStringConverter = deck2.deck.map(element => element.replace(/ /g, ''));
 console.log(cardStringConverter);
+
+//dice roll attempt
+const rollDice = () => {
+    const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
+    let randomA = Math.floor(Math.random() * diceSides.length);
+    $("#dice1").classList.add(diceSides[randomA]);
+    let randomB = Math.floor(Math.random() * diceSides.length);
+    $("#dice2").classList.add(diceSides[randomB]);
+}
+rollDice();
