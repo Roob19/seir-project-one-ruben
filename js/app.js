@@ -87,7 +87,7 @@ const initialize = () => {
 
 const discardPile = [];
 if (discardPile[0] != null){
-    $("#discardPile").add.classList(discardPile[0]);
+    $("#discardPile").add.classList(discardPile[discardPile.length]);
 }
 
 
@@ -96,5 +96,5 @@ console.log(deck2.deck);
 deck2.shuffle();
 
 //removing spaces from cards in Deck to use as classes in CSS to diplay card images
-let result = deck2.deck.map(element => element.replace(/ /g, ''));
-console.log(result);
+let cardStringConverter = deck2.deck.map(element => element.replace(/ /g, ''));
+console.log(cardStringConverter);
