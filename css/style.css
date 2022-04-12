@@ -122,9 +122,6 @@ p{
     object-fit: contain;
 }
 
-.card.goldsylop0{
-    content: url("../images/0\ Sylop.png");
-}
 .card.redcircles-1{
     content: url("../images/-1\ Circle.png");
 }
@@ -205,4 +202,106 @@ p{
 }
 .card.redtriangles-9{
     content: url("../images/-9\ Triangle.png");
+}
+.card.redcircles-10{
+    content: url("../images/-10\ Circle.png");
+}
+.card.redsquares-10{
+    content: url("../images/-10\ Square.png");
+}
+.card.redtriangles-10{
+    content: url("../images/-10\ Triangle.png");
+}
+.card.greencircles1{
+    content: url("../images/+1\ Circle.png");
+}
+.card.greensquares1{
+    content: url("../images/+1\ Square.png");
+}
+.card.greentriangles1{
+    content: url("../images/+1\ Triangle.png");
+}
+.card.greencircles2{
+    content: url("../images/+2\ Circle.png");
+}
+.card.greensquares2{
+    content: url("../images/+2\ Square.png");
+}
+.card.greentriangles2{
+    content: url("../images/+2\ Triangle.png");
+}
+.card.greencircles3{
+    content: url("../images/+3\ Circle.png");
+}
+.card.greensquares3{
+    content: url("../images/+3\ Square.png");
+}
+.card.greentriangles3{
+    content: url("../images/+3\ Triangle.png");
+}
+.card.greencircles4{
+    content: url("../images/+4\ Circle.png");
+}
+.card.greensquares4{
+    content: url("../images/+4\ Square.png");
+}
+.card.greentriangles4{
+    content: url("../images/+4\ Triangle.png");
+}
+.card.greencircles5{
+    content: url("../images/+5\ Circle.png");
+}
+.card.greensquares5{
+    content: url("../images/+5\ Square.png");
+}
+.card.greentriangles5{
+    content: url("../images/+5\ Triangle.png");
+}
+.card.greencircles6{
+    content: url("../images/+6\ Circle.png");
+}
+.card.greensquares6{
+    content: url("../images/+6\ Square.png");
+}
+.card.greentriangles6{
+    content: url("../images/+6\ Triangle.png");
+}
+.card.greencircles7{
+    content: url("../images/+7\ Circle.png");
+}
+.card.greensquares7{
+    content: url("../images/+7\ Square.png");
+}
+.card.greentriangles7{
+    content: url("../images/+7\ Triangle.png");
+}
+.card.greencircles8{
+    content: url("../images/+8\ Circle.png");
+}
+.card.greensquares8{
+    content: url("../images/+8\ Square.png");
+}
+.card.greentriangles8{
+    content: url("../images/+8\ Triangle.png");
+}
+.card.greencircles9{
+    content: url("../images/+9\ Circle.png");
+}
+.card.greensquares9{
+    content: url("../images/+9\ Square.png");
+}
+.card.greentriangles9{
+    content: url("../images/+9\ Triangle.png");
+}
+.card.greencircles10{
+    content: url("../images/+10\ Circle.png");
+}
+.card.greensquares10{
+    content: url("../images/+10\ Square.png");
+}
+.card.greentriangles10{
+    content: url("../images/+10\ Triangle.png");
+}
+.card.goldsylop0{
+    content: url("../images/0\ Sylop.png");
 }
