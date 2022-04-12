@@ -4,12 +4,14 @@
 body {
     height: 100vh;
     width: 100vw;
+    /* display: flex; */
 }
 section{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     flex-direction: row;
+    justify-content: center;
 }
 p{
     border: 1px solid #000;
@@ -31,6 +33,10 @@ p{
 .card{
     box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
     border-radius: 0.20em;
+    content: url("../images/Back.png");
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: fill;
 }
 .chips{
     order: 3;
@@ -43,19 +49,28 @@ p{
     display: flex;
     box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
     border-radius: 0.20em;
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: fill;
 }
 #drawPile{
     grid-column: 1;
     grid-row: 3;
-    background-image: url("../images/Back.png");
+    content: url("../images/Back.png");
+    /* transform: rotate(90deg); */
+    object-fit: contain;
 }
 #spikePile{
     grid-column: 2;
     grid-row: 3;
+    content: url("../images/-1\ Square.png");
+    max-width: 75px;
 }
 #discardPile{
     grid-column: 1;
     grid-row: 2;
+    transform: rotate(90deg);
+    content: url("../images/+10\ Circle.png");
 }
 #diceBox{
     display: flex;
@@ -76,8 +91,14 @@ p{
     grid-row: 3;
 }
 .dice{
-    background-image: url("../images/Spike Die Side 1.png");
+    max-width: 33px;
+    max-height: 33px;
+    content: url("../images/Spike Die Side 1.png");
+    transform: rotate(45deg);
+    object-fit: contain;
 }
 .token{
-    background-image: url("../images/SabaccDealerPuck.png");
+    max-width: 33px;
+    content: url("../images/SabaccDealerPuck.png");
+    object-fit: contain;
 }
