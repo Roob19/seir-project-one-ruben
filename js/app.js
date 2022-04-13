@@ -1,6 +1,6 @@
 class Deck {
     constructor() {
-        this.deck = [].map(element => element.replace(/ /g, ''));;
+        this.deck = [];
 
         const staves = ['circles', 'triangles', 'squares'];//three suits of green and red, 60 cards
         const greenFaceValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];//all green cards are of positive values, 30 green cards
@@ -17,6 +17,7 @@ class Deck {
             }
         }
         this.deck.push(`gold sylop 0`, `gold sylop 0`);//only two sylops of 0 value and of no suit per deck, 62 cards in total
+        this.deck = this.deck.map(element => element.replace(/ /g, ''));//removing spaces from cards in Deck to use as classes in CSS to diplay card images
     }
     //shuffles created deck
     shuffle() {
@@ -72,42 +73,63 @@ class Player {
 
 let playerTurn = 0;
 
-const initialize = () => {
-    const deck1 = new Deck();
-    deck1.shuffle();
-    const compPlayer = new Player();
-    const playerOne = new Player();
+const deck1 = new Deck();
+deck1.shuffle();
+const compPlayer = new Player();
+const playerOne = new Player();
+const dHand = [];
+const pHand = [];
 
-    compPlayer.cardA = deck1[deck1.length];
-    $("#pCardA").addClass(compPlayer.cardA);
-    deck1.deal();
-    playerOne.cardA = deck1[deck1.length];
-    $("#dCardA").addClass(playerOne.cardA);
-    deck1.deal();
+//deal two cards to each player from top of deck
+compPlayer.player.cardA = deck1.deck[deck1.deck.length-1];
+$("#pCardA").addClass(compPlayer.player.cardA);
+deck1.deal();
+playerOne.player.cardA = deck1.deck[deck1.deck.length-1];
+$("#dCardA").addClass(playerOne.player.cardA);
+deck1.deal();
+compPlayer.player.cardB = deck1.deck[deck1.deck.length-1];
+$("#pCardB").addClass(compPlayer.player.cardB);
+deck1.deal();
+playerOne.player.cardB = deck1.deck[deck1.deck.length-1];
+$("#dCardB").addClass(playerOne.player.cardB);
+deck1.deal();
+//populate each players chip value
+$("#dCredBalance").text(`$${compPlayer.player.credBalance}`);
+$("#pCredBalance").text(`$${playerOne.player.credBalance}`);
 
-    $("#dCredBalance").text(`$ ${compPlayer.credBalance}`);
-    $("#pCredBalance").text(`$ ${playerOne.credBalance}`);
+dHand.push(compPlayer.player.cardA);
+dHand.push(compPlayer.player.cardB);
+dHand.push(compPlayer.player.cardC);
+dHand.push(compPlayer.player.cardD);
+console.log(dHand);
 
-    console.log(deck1.deck);
-    console.log(compPlayer.cardA);
-    console.log(playerOne.cardA);
-    console.log(compPlayer.credBalance);
-    console.log(playerOne.credBalance);
+pHand.push(playerOne.player.cardA);
+pHand.push(playerOne.player.cardB);
+pHand.push(playerOne.player.cardC);
+pHand.push(playerOne.player.cardD);
+console.log(pHand);
+
+const calcDealHandValue = (dealHand) => {
+    let cardOneValue = [];
+    let cardOne = dealHand[0].split('').reverse();
+    for (let i =0; i<cardOne.length; i++) {
+        if (cardOne[i] === 's') {
+            return Number(cardOneValue.reverse().join(''));
+        } else if (cardOne[i] === '-') {
+            cardOneValue.push('-');
+        } else {
+            cardOneValue.push(cardOne[i]);
+        }
+    }
+    return cardOneValue;
 }
+
+calcDealHandValue(dHand);
 
 const discardPile = [];
 if (discardPile[0] != null){
     $("#discardPile").addClass(discardPile[discardPile.length]);
 }
-
-
-// const deck2 = new Deck();
-// console.log(deck2.deck);
-// deck2.shuffle();
-
-// //removing spaces from cards in Deck to use as classes in CSS to diplay card images
-// let cardStringConverter = deck2.deck.map(element => element.replace(/ /g, ''));
-// console.log(cardStringConverter);
 
 //dice roll attempt
 const rollDice = () => {
@@ -117,5 +139,5 @@ const rollDice = () => {
     let randomB = Math.floor(Math.random() * diceSides.length);
     $("#dice2").addClass(diceSides[randomB]);
 }
+
 rollDice();
-initialize();

@@ -20,7 +20,7 @@ p{
 }
 #dealer{
     display: flex;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     grid-column: 3;
     grid-row: 1;
     align-items: center;
@@ -29,18 +29,28 @@ p{
 }
 #player{
     display: flex;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     grid-column: 3;
     grid-row: 5; 
     align-items: center;
 }
 .card{
-    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
-    border-radius: 0.20em;
+    /* box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); */
+    /* border-radius: 0.20em; */
     /* content: url("../images/Back.png"); */
     max-width: 75px;
     max-height: 75px;
     object-fit: fill;
+}
+.points{
+    max-height: 50px;
+    max-width: 50px;
+    padding: 33px;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 1em;
+    /* font-family: 'Aurebesh Racer AF', sans-serif; */
+    object-fit: contain;
 }
 .chips{
     order: 3;
@@ -109,6 +119,7 @@ p{
     object-fit: fill;
 }
 .dice{
+    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
     max-width: 33px;
     max-height: 33px;
     content: url("../images/Spike\ Die\ Side\ 1.png");
