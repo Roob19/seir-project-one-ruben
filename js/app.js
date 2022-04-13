@@ -108,12 +108,15 @@ const pHand = [];
 
 //turn mechanic
 compPlayer.player.dealerToken = true;
-
-if (compPlayer.player.dealerToken === true) {
+function whosTurn() {
+    if (compPlayer.player.dealerToken === true) {
     $('#dDealerToken').addClass('show');
-} else {
-    $('#dDealerToken').addClass('show');
+    } else {
+    $('#pDealerToken').addClass('show');
+    }
 }
+whosTurn;
+
 //flip top card up and place on spikePile
 initialSpikeCard =deck1.deck[deck1.deck.length-1];
 $('#spikePile').addClass(initialSpikeCard);
@@ -154,50 +157,93 @@ function rollDice() {
 }
 diceBox.addEventListener('click', rollDice);
 
-if (playerOne.player.dealerToken === false && playerOne.player.cardC === null) {
-    const drawCard = () => {
-        playerOne.player.cardC = deck1.deck[deck1.deck.length-1];
-        $("#pCardC").addClass(playerOne.player.cardC);
-        pHand.push(playerOne.player.cardC);
-        deck1.deal();
-        compPlayer.player.dealerToken = false;
-        playerOne.player.dealerToken = true;
-        $('#dDealerToken').removeClass('show');
-        $('#pDealerToken').addClass('show');
-        calcHandValue;
-    }
-    drawPile.addEventListener('click', drawCard);
-} else if (playerOne.player.dealerToken === false && playerOne.player.cardD === null) {
-    const drawCard = () => {
-        playerOne.player.cardD = deck1.deck[deck1.deck.length-1];
-        $("#pCardD").addClass(playerOne.player.cardD);
-        pHand.push(playerOne.player.cardD);
-        deck1.deal();
-        compPlayer.player.dealerToken = false;
-        playerOne.player.dealerToken = true;
-        $('#dDealerToken').removeClass('show');
-        $('#pDealerToken').addClass('show');
-    }
-    drawPile.addEventListener('click', drawCard);
-} else if (playerOne.player.dealerToken === false && playerOne.player.cardE === null) {
-    const drawCard = () => {
-        playerOne.player.cardE = deck1.deck[deck1.deck.length-1];
-        $("#pCardE").addClass(playerOne.player.cardE);
-        pHand.push(playerOne.player.cardE);
-        deck1.deal();
-        compPlayer.player.dealerToken = false;
-        playerOne.player.dealerToken = true;
-        $('#dDealerToken').removeClass('show');
-        $('#pDealerToken').addClass('show');
-    }
-    drawPile.addEventListener('click', drawCard);
+
+//player one to draw from deck when it's their turn
+function playerDrawCardC() {
+    playerOne.player.cardC = deck1.deck[deck1.deck.length-1];
+    $("#pCardC").addClass(playerOne.player.cardC);
+    pHand.push(playerOne.player.cardC);
+    deck1.deal();
+    compPlayer.player.dealerToken = false;
+    playerOne.player.dealerToken = true;
+    whosTurn;
+    //     console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+    //     console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+}
+function playerDrawCardD() {
+    playerOne.player.cardD = deck1.deck[deck1.deck.length-1];
+    $("#pCardD").addClass(playerOne.player.cardD);
+    pHand.push(playerOne.player.cardD);
+    deck1.deal();
+    compPlayer.player.dealerToken = false;
+    playerOne.player.dealerToken = true;
+    whosTurn;
+        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+}
+function playerDrawCardE() {
+    playerOne.player.cardE = deck1.deck[deck1.deck.length-1];
+    $("#pCardE").addClass(playerOne.player.cardE);
+    pHand.push(playerOne.player.cardE);
+    deck1.deal();
+    compPlayer.player.dealerToken = false;
+    playerOne.player.dealerToken = true;
+    whosTurn;
+        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+}
+if ($(pDealerToken).attr('class') != 'show' && playerOne.player.cardC === null) {
+    drawPile.addEventListener('click', playerDrawCardC);
+} else if ($(pDealerToken).attr('class') != 'show' && playerOne.player.cardD === null) {
+    drawPile.addEventListener('click', playerDrawCardD);
+} else if ($(pDealerToken).attr('class') != 'show' && playerOne.player.cardE === null) {
+    drawPile.addEventListener('click', playerDrawCardE);
+}
+
+//other player to draw from deck when it's their turn
+function compDrawCardC() {
+    compPlayer.player.cardC = deck1.deck[deck1.deck.length-1];
+    $("#dCardC").addClass(compPlayer.player.cardC);
+    dHand.push(compPlayer.player.cardC);
+    deck1.deal();
+    playerOne.player.dealerToken = false;
+    compPlayer.player.dealerToken = true;
+    whosTurn;
+        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+}
+function compDrawCardD() {
+    compPlayer.player.cardD = deck1.deck[deck1.deck.length-1];
+    $("#dCardD").addClass(compPlayer.player.cardD);
+    dHand.push(compPlayer.player.cardD);
+    deck1.deal();
+    playerOne.player.dealerToken = false;
+    compPlayer.player.dealerToken = true;
+    whosTurn;
+        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+}
+function compDrawCardE() {
+    compPlayer.player.cardE = deck1.deck[deck1.deck.length-1];
+    $("#dCardE").addClass(compPlayer.player.cardE);
+    dHand.push(compPlayer.player.cardE);
+    deck1.deal();
+    playerOne.player.dealerToken = false;
+    compPlayer.player.dealerToken = true;
+    whosTurn;
+        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+}
+if ($(dDealerToken).attr('class') != 'show' && compPlayer.player.cardC === null) {
+    drawPile.addEventListener('click', compDrawCardC);
+} else if ($(dDealerToken).attr('class') != 'show' && compPlayer.player.cardD === null) {
+    drawPile.addEventListener('click', compDrawCardD);
+} else if ($(dDealerToken).attr('class') != 'show' && compPlayer.player.cardE === null) {
+    drawPile.addEventListener('click', compDrawCardE);
 }
 
 dHand.push(compPlayer.player.cardA);
 dHand.push(compPlayer.player.cardB);
-dHand.push(compPlayer.player.cardC);
-dHand.push(compPlayer.player.cardD);
-dHand.push(compPlayer.player.cardE);
 
 pHand.push(playerOne.player.cardA);
 pHand.push(playerOne.player.cardB);
@@ -235,4 +281,7 @@ $('#pHandVal').text(calcHandValue(pHand));
 
 console.log(dHand);
 console.log(pHand);
+console.log(compPlayer.player);
 console.log(playerOne.player);
+console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
