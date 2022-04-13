@@ -8,6 +8,9 @@ const dCardB = document.querySelector('#dCardB');
 const dCardC = document.querySelector('#dCardC');
 const dCardD = document.querySelector('#dCardD');
 const dCardE = document.querySelector('#dCardE');
+//token
+const dDealerToken = document.querySelector('#dDealerToken');
+const pDealerToken = document.querySelector('#pDealerToken');
 //player cards
 const pCardA = document.querySelector('#pCardA');
 const pCardB = document.querySelector('#pCardB');
@@ -17,8 +20,11 @@ const pCardE = document.querySelector('#pCardE');
 //piles
 const drawPile = document.querySelector('#drawPile');
 const spikePile = document.querySelector('#spikePile');
-
-
+const discardPile = document.querySelector('#discardPile');
+//money pots
+const sabaccPot = document.querySelector('#sabaccPot');
+const gamePot = document.querySelector('#gamePot');
+//deck class constructor and methods
 class Deck {
     constructor() {
         this.deck = [];
@@ -100,7 +106,11 @@ const compPlayer = new Player();
 const playerOne = new Player();
 const dHand = [];
 const pHand = [];
-
+//flip top card up and place on spikePile
+initialSpikeCard =deck1.deck[deck1.deck.length-1];
+console.log(initialSpikeCard);
+$('#spikePile').addClass(initialSpikeCard);
+deck1.deal();
 //deal two cards to each player from top of deck
 compPlayer.player.cardA = deck1.deck[deck1.deck.length-1];
 $("#pCardA").addClass(compPlayer.player.cardA);
@@ -160,10 +170,10 @@ const calcHandValue = (cardsInHand) => {
 //calculates total value of cards in a hand and populates HTML
 $('#dHandVal').text(calcHandValue(dHand));
 $('#pHandVal').text(calcHandValue(pHand));
-//dicard face showing up
-const discardPile = [];
-if (discardPile[0] != null){
-    $("#discardPile").addClass(discardPile[discardPile.length]);
+//discard face showing up
+const faceUpDiscard = [];
+if (faceUpDiscard[0] != null){
+    $("#discardPile").addClass(faceUpDiscard[faceUpDiscard.length]);
 }
 
 
