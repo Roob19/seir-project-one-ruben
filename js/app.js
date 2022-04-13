@@ -53,7 +53,7 @@ class Deck {
                 this.deck.push(`red ${staves[suit]} ${redFaceValue[value]}`);//asign negative numbers to red
             }
         }
-        this.deck.push(`gold sylop 0`, `gold sylop 0`);
+        this.deck.push(`gold sylops 0`, `gold sylops 0`);
     }
 }
 
@@ -109,50 +109,43 @@ pHand.push(playerOne.player.cardC);
 pHand.push(playerOne.player.cardD);
 console.log(pHand);
 
-const calcDealerHandValue = (dealHand) => {
+const calcHandValue = (cardsInHand) => {
     let pointsArr = [];
+    let nullCount = 0;
     const negSingleSearch = /-\d/g;
     const negDoubleSearch = /-\d\d/g;
     const posSingleSearch = /\d/g;
     const posDoubleSearch = /\d\d/g;
 
-    // const found = () => {dHand.match(regex);}
-
-    for (let i=0; i<dealHand.length; i++) {
-        if (dealHand[i].match(negDoubleSearch)) {
-            pointsArr.push(dealHand[i].match(negDoubleSearch));
-        } else if (dealHand[i].match(negSingleSearch)) {
-            pointsArr.push(dealHand[i].match(negSingleSearch));
-        } else if (dealHand[i].match(posDoubleSearch)) {
-            pointsArr.push(dealHand[i].match(posDoubleSearch));
-        } else if (dealHand[i].match(posSingleSearch)) {
-            pointsArr.push(dealHand[i].match(posSingleSearch));
+    for (let i=0; i<cardsInHand.length; i++) {
+        if (cardsInHand[i] === null) {
+            nullCount += 1;
+        } else if (cardsInHand[i].match(negDoubleSearch)) {
+            pointsArr.push(cardsInHand[i].match(negDoubleSearch));
+        } else if (cardsInHand[i].match(negSingleSearch)) {
+            pointsArr.push(cardsInHand[i].match(negSingleSearch));
+        } else if (cardsInHand[i].match(posDoubleSearch)) {
+            pointsArr.push(cardsInHand[i].match(posDoubleSearch));
+        } else if (cardsInHand[i].match(posSingleSearch)) {
+            pointsArr.push(cardsInHand[i].match(posSingleSearch));
         }
     }
-    console.log(pointsArr);
-    // let cardOneValue = [];
-    // let cardOne = dealHand.split('').reverse();
-    // for (let i =0; i<cardOne.length; i++) {
-    //     if (cardOne[i] === 's') {
-    //         return Number(cardOneValue.reverse().join(''));
-    //     } else if (cardOne[i] === '-') {
-    //         cardOneValue.push('-');
-    //     } else {
-    //         cardOneValue.push(cardOne[i]);
-    //     }
-    // }
-    // return cardOneValue;
+
+    const initialValue = 0;
+    const sumOfCardsInHand = pointsArr.reduce((previousValue, currentValue) => Number(previousValue) + Number(currentValue), initialValue);
+    
+    return sumOfCardsInHand;
 }
-
-calcDealerHandValue(dHand);
-
+//calculates total value of cards in a hand and populates HTML
+$('#dHandVal').text(calcHandValue(dHand));
+$('#pHandVal').text(calcHandValue(pHand));
+//dicard face showing up
 const discardPile = [];
 if (discardPile[0] != null){
     $("#discardPile").addClass(discardPile[discardPile.length]);
 }
 
-//dice roll attempt
-const rollDice = () => {
+function rollDice() {
     const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
     let randomA = Math.floor(Math.random() * diceSides.length);
     $("#dice1").addClass(diceSides[randomA]);
@@ -160,4 +153,13 @@ const rollDice = () => {
     $("#dice2").addClass(diceSides[randomB]);
 }
 
-rollDice();
+console.log(rollDice);
+// $('.dice').off('click');
+$('.dice').click(console.log(`.dice clicked`));
+
+// $('#diceBox').off('click');
+$('#diceBox').click(console.log(`#diceBox clicked`));
+
+// $('#diceBox').off('click');
+$('#diceBox').on('click', console.log(`#diceBox clicked`));
+// rollDice()
