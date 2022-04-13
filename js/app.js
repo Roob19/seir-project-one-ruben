@@ -1,3 +1,24 @@
+//dice
+const diceBox = document.querySelector('#diceBox');
+const dice1 = document.querySelector('#dice1');
+const dice2 = document.querySelector('#dice2');
+//dealer cards
+const dCardA = document.querySelector('#dCardA');
+const dCardB = document.querySelector('#dCardB');
+const dCardC = document.querySelector('#dCardC');
+const dCardD = document.querySelector('#dCardD');
+const dCardE = document.querySelector('#dCardE');
+//player cards
+const pCardA = document.querySelector('#pCardA');
+const pCardB = document.querySelector('#pCardB');
+const pCardC = document.querySelector('#pCardC');
+const pCardD = document.querySelector('#pCardD');
+const pCardE = document.querySelector('#pCardE');
+//piles
+const drawPile = document.querySelector('#drawPile');
+const spikePile = document.querySelector('#spikePile');
+
+
 class Deck {
     constructor() {
         this.deck = [];
@@ -145,21 +166,21 @@ if (discardPile[0] != null){
     $("#discardPile").addClass(discardPile[discardPile.length]);
 }
 
+
 function rollDice() {
     const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
     let randomA = Math.floor(Math.random() * diceSides.length);
     $("#dice1").addClass(diceSides[randomA]);
+        console.log(randomA);
     let randomB = Math.floor(Math.random() * diceSides.length);
     $("#dice2").addClass(diceSides[randomB]);
+        console.log(randomB);
 }
 
-console.log(rollDice);
-// $('.dice').off('click');
-$('.dice').click(console.log(`.dice clicked`));
+diceBox.addEventListener('click', rollDice);
 
-// $('#diceBox').off('click');
-$('#diceBox').click(console.log(`#diceBox clicked`));
+// const diceOne = document.querySelector('#dice1');
+// diceOne.addEventListener('click', rollDice);
 
-// $('#diceBox').off('click');
-$('#diceBox').on('click', console.log(`#diceBox clicked`));
-// rollDice()
+// const diceTwo = document.querySelector('#dice2');
+// diceTwo.addEventListener('click', rollDice);
