@@ -110,18 +110,23 @@ pHand.push(playerOne.player.cardD);
 console.log(pHand);
 
 const calcDealHandValue = (dealHand) => {
-    let cardOneValue = [];
-    let cardOne = dealHand[0].split('').reverse();
-    for (let i =0; i<cardOne.length; i++) {
-        if (cardOne[i] === 's') {
-            return Number(cardOneValue.reverse().join(''));
-        } else if (cardOne[i] === '-') {
-            cardOneValue.push('-');
-        } else {
-            cardOneValue.push(cardOne[i]);
-        }
-    }
-    return cardOneValue;
+    const paragraph = 'The quick-9 brown fox jumps-10 over the lazy5 dog. It barked.';
+    const regex = /[$s]/g;
+    const found = () => {dHand.match(regex);}
+
+    return found;
+    // let cardOneValue = [];
+    // let cardOne = dealHand.split('').reverse();
+    // for (let i =0; i<cardOne.length; i++) {
+    //     if (cardOne[i] === 's') {
+    //         return Number(cardOneValue.reverse().join(''));
+    //     } else if (cardOne[i] === '-') {
+    //         cardOneValue.push('-');
+    //     } else {
+    //         cardOneValue.push(cardOne[i]);
+    //     }
+    // }
+    // return cardOneValue;
 }
 
 calcDealHandValue(dHand);
