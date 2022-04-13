@@ -16,7 +16,7 @@ class Deck {
                 this.deck.push(`red ${staves[suit]} ${redFaceValue[value]}`);//all three suits given negative values and 'red' added to name
             }
         }
-        this.deck.push(`gold sylop 0`, `gold sylop 0`);//only two sylops of 0 value and of no suit per deck, 62 cards in total
+        this.deck.push(`gold sylops 0`, `gold sylops 0`);//only two sylops of 0 value and of no suit per deck, 62 cards in total
         this.deck = this.deck.map(element => element.replace(/ /g, ''));//removing spaces from cards in Deck to use as classes in CSS to diplay card images
     }
     //shuffles created deck
@@ -109,12 +109,27 @@ pHand.push(playerOne.player.cardC);
 pHand.push(playerOne.player.cardD);
 console.log(pHand);
 
-const calcDealHandValue = (dealHand) => {
-    const paragraph = 'The quick-9 brown fox jumps-10 over the lazy5 dog. It barked.';
-    const regex = /[$s]/g;
-    const found = () => {dHand.match(regex);}
+const calcDealerHandValue = (dealHand) => {
+    let pointsArr = [];
+    const negSingleSearch = /-\d/g;
+    const negDoubleSearch = /-\d\d/g;
+    const posSingleSearch = /\d/g;
+    const posDoubleSearch = /\d\d/g;
 
-    return found;
+    // const found = () => {dHand.match(regex);}
+
+    for (let i=0; i<dealHand.length; i++) {
+        if (dealHand[i].match(negDoubleSearch)) {
+            pointsArr.push(dealHand[i].match(negDoubleSearch));
+        } else if (dealHand[i].match(negSingleSearch)) {
+            pointsArr.push(dealHand[i].match(negSingleSearch));
+        } else if (dealHand[i].match(posDoubleSearch)) {
+            pointsArr.push(dealHand[i].match(posDoubleSearch));
+        } else if (dealHand[i].match(posSingleSearch)) {
+            pointsArr.push(dealHand[i].match(posSingleSearch));
+        }
+    }
+    console.log(pointsArr);
     // let cardOneValue = [];
     // let cardOne = dealHand.split('').reverse();
     // for (let i =0; i<cardOne.length; i++) {
@@ -129,7 +144,7 @@ const calcDealHandValue = (dealHand) => {
     // return cardOneValue;
 }
 
-calcDealHandValue(dHand);
+calcDealerHandValue(dHand);
 
 const discardPile = [];
 if (discardPile[0] != null){
