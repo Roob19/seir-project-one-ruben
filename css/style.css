@@ -129,8 +129,9 @@ p{
 .token{
     max-width: 50px;
     max-height: 50px;
+}
+.token.show{
     content: url("../images/Sabacc\ Dealer\ Puck.png");
-    object-fit: contain;
 }
 
 .card.redcircles-1{

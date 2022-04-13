@@ -24,6 +24,7 @@ const discardPile = document.querySelector('#discardPile');
 //money pots
 const sabaccPot = document.querySelector('#sabaccPot');
 const gamePot = document.querySelector('#gamePot');
+
 //deck class constructor and methods
 class Deck {
     constructor() {
@@ -98,47 +99,109 @@ class Player {
     }
 }
 
-let playerTurn = 0;
-
 const deck1 = new Deck();
 deck1.shuffle();
 const compPlayer = new Player();
 const playerOne = new Player();
 const dHand = [];
 const pHand = [];
+
+//turn mechanic
+compPlayer.player.dealerToken = true;
+
+if (compPlayer.player.dealerToken === true) {
+    $('#dDealerToken').addClass('show');
+} else {
+    $('#dDealerToken').addClass('show');
+}
 //flip top card up and place on spikePile
 initialSpikeCard =deck1.deck[deck1.deck.length-1];
-console.log(initialSpikeCard);
 $('#spikePile').addClass(initialSpikeCard);
 deck1.deal();
+
 //deal two cards to each player from top of deck
 compPlayer.player.cardA = deck1.deck[deck1.deck.length-1];
-$("#pCardA").addClass(compPlayer.player.cardA);
+$("#dCardA").addClass(compPlayer.player.cardA);
 deck1.deal();
 playerOne.player.cardA = deck1.deck[deck1.deck.length-1];
-$("#dCardA").addClass(playerOne.player.cardA);
+$("#pCardA").addClass(playerOne.player.cardA);
 deck1.deal();
 compPlayer.player.cardB = deck1.deck[deck1.deck.length-1];
-$("#pCardB").addClass(compPlayer.player.cardB);
+$("#dCardB").addClass(compPlayer.player.cardB);
 deck1.deal();
 playerOne.player.cardB = deck1.deck[deck1.deck.length-1];
-$("#dCardB").addClass(playerOne.player.cardB);
+$("#pCardB").addClass(playerOne.player.cardB);
 deck1.deal();
 //populate each players chip value
 $("#dCredBalance").text(`$${compPlayer.player.credBalance}`);
 $("#pCredBalance").text(`$${playerOne.player.credBalance}`);
 
+
+//discard face showing up
+const faceUpDiscard = [];
+if (faceUpDiscard[0] != null){
+    $("#discardPile").addClass(faceUpDiscard[faceUpDiscard.length]);
+}
+//dice rolling mechanic
+const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
+function rollDice() {
+    let randomA = Math.floor(Math.random() * diceSides.length);
+    $("#dice1").addClass(diceSides[randomA]);
+        console.log(`Dice one roll: ${randomA}`);
+    let randomB = Math.floor(Math.random() * diceSides.length);
+    $("#dice2").addClass(diceSides[randomB]);
+        console.log(`Dice two roll: ${randomB}`);
+}
+diceBox.addEventListener('click', rollDice);
+
+if (playerOne.player.dealerToken === false && playerOne.player.cardC === null) {
+    const drawCard = () => {
+        playerOne.player.cardC = deck1.deck[deck1.deck.length-1];
+        $("#pCardC").addClass(playerOne.player.cardC);
+        pHand.push(playerOne.player.cardC);
+        deck1.deal();
+        compPlayer.player.dealerToken = false;
+        playerOne.player.dealerToken = true;
+        $('#dDealerToken').removeClass('show');
+        $('#pDealerToken').addClass('show');
+        calcHandValue;
+    }
+    drawPile.addEventListener('click', drawCard);
+} else if (playerOne.player.dealerToken === false && playerOne.player.cardD === null) {
+    const drawCard = () => {
+        playerOne.player.cardD = deck1.deck[deck1.deck.length-1];
+        $("#pCardD").addClass(playerOne.player.cardD);
+        pHand.push(playerOne.player.cardD);
+        deck1.deal();
+        compPlayer.player.dealerToken = false;
+        playerOne.player.dealerToken = true;
+        $('#dDealerToken').removeClass('show');
+        $('#pDealerToken').addClass('show');
+    }
+    drawPile.addEventListener('click', drawCard);
+} else if (playerOne.player.dealerToken === false && playerOne.player.cardE === null) {
+    const drawCard = () => {
+        playerOne.player.cardE = deck1.deck[deck1.deck.length-1];
+        $("#pCardE").addClass(playerOne.player.cardE);
+        pHand.push(playerOne.player.cardE);
+        deck1.deal();
+        compPlayer.player.dealerToken = false;
+        playerOne.player.dealerToken = true;
+        $('#dDealerToken').removeClass('show');
+        $('#pDealerToken').addClass('show');
+    }
+    drawPile.addEventListener('click', drawCard);
+}
+
 dHand.push(compPlayer.player.cardA);
 dHand.push(compPlayer.player.cardB);
 dHand.push(compPlayer.player.cardC);
 dHand.push(compPlayer.player.cardD);
-console.log(dHand);
+dHand.push(compPlayer.player.cardE);
 
 pHand.push(playerOne.player.cardA);
 pHand.push(playerOne.player.cardB);
-pHand.push(playerOne.player.cardC);
-pHand.push(playerOne.player.cardD);
-console.log(pHand);
+
 
 const calcHandValue = (cardsInHand) => {
     let pointsArr = [];
@@ -161,7 +224,6 @@ const calcHandValue = (cardsInHand) => {
             pointsArr.push(cardsInHand[i].match(posSingleSearch));
         }
     }
-
     const initialValue = 0;
     const sumOfCardsInHand = pointsArr.reduce((previousValue, currentValue) => Number(previousValue) + Number(currentValue), initialValue);
     
@@ -170,27 +232,7 @@ const calcHandValue = (cardsInHand) => {
 //calculates total value of cards in a hand and populates HTML
 $('#dHandVal').text(calcHandValue(dHand));
 $('#pHandVal').text(calcHandValue(pHand));
-//discard face showing up
-const faceUpDiscard = [];
-if (faceUpDiscard[0] != null){
-    $("#discardPile").addClass(faceUpDiscard[faceUpDiscard.length]);
-}
 
-
-function rollDice() {
-    const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
-    let randomA = Math.floor(Math.random() * diceSides.length);
-    $("#dice1").addClass(diceSides[randomA]);
-        console.log(randomA);
-    let randomB = Math.floor(Math.random() * diceSides.length);
-    $("#dice2").addClass(diceSides[randomB]);
-        console.log(randomB);
-}
-
-diceBox.addEventListener('click', rollDice);
-
-// const diceOne = document.querySelector('#dice1');
-// diceOne.addEventListener('click', rollDice);
-
-// const diceTwo = document.querySelector('#dice2');
-// diceTwo.addEventListener('click', rollDice);
+console.log(dHand);
+console.log(pHand);
+console.log(playerOne.player);
