@@ -149,9 +149,12 @@ dHand.push(compPlayer.player.cardB);
 pHand.push(playerOne.player.cardA);
 pHand.push(playerOne.player.cardB);
 
-//populate each players chip value
-$("#dCredBalance").text(`$${compPlayer.player.credBalance}`);
-$("#pCredBalance").text(`$${playerOne.player.credBalance}`);
+//populate each players chip value at start
+function startingBalance() {
+    $("#dCredBalance").text(`$${compPlayer.player.credBalance}`);
+    $("#pCredBalance").text(`$${playerOne.player.credBalance}`);
+}
+setTimeout(() => {startingBalance()}, 300);
 
 const calcHandValue = (cardsInHand) => {
     let pointsArr = [];
@@ -424,15 +427,30 @@ function rollDice() {
 rollDice();
 diceBox.addEventListener('click', rollDice);
 
-function playerBetUp() {
-    playerOne.player.credBalance -= 1;
-    const sabaccPot = document.querySelector('#sabaccPot');
-    const gamePot = document.querySelector('#gamePot');
+sabaccPotValue = 0;
+$('#sabaccPot').text(sabaccPotValue);
+gamePotValue = 0;
+$('#gamePot').text(gamePotValue);
+
+function minBet() {
+    compPlayer.player.credBalance -= 2;
 }
+function playerBetUp() {
+    minBet();
+    $('#sabaccPot').text(sabaccPotValue += 1);
+    $('#gamePot').text(gamePotValue += 1);
+    setTimeout(() => {$('#dCreditBalance').text(playerOne.player.credBalance)}, 500);
+}
+pBetUp.addEventListener('click', playerBetUp);
 
 function dealerBetUp() {
-    compPlayer.player.credBalance
+    minBet();
+    $('#sabaccPot').text(sabaccPotValue += 1);
+    $('#gamePot').text(gamePotValue += 1);
+    setTimeout(() => {$('#dCreditBalance').text(compPlayer.player.credBalance)}, 500);
 }
+dBetUp.addEventListener('click', dealerBetUp)
+
 console.log(dHand);
 console.log(pHand);
 // console.log(compPlayer.player);
