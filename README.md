@@ -160,6 +160,10 @@ Single Blind Draw:
 
 >**Mike Bostock** - https://bost.ocks.org/mike/shuffle/ 
 
+>**Carlos Delgado** - https://ourcodeworld.com/articles/read/1470/how-to-find-the-closest-value-to-zero-from-an-array-with-positive-and-negative-numbers-in-javascript
+
+>**Table Top Audio** - https://tabletopaudio.com/
+
 >**Nulpoints** - https://github.com/Nulpoints 
 
 >**La Tribune de Coruscant** - https://www.youtube.com/watch?v=aym6aGyH4mQ 

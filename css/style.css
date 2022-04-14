@@ -1,10 +1,14 @@
 *{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 90vh;
+    width: 90vw;
     /* display: flex; */
+    background-image: url(../images/poker-table-green-casino-blur-background-61016762.jpeg);
+    object-fit: contain;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
 section{
     display: grid;
@@ -15,7 +19,6 @@ section{
     justify-content: space-between;
 }
 p{
-    border: 1px solid #000;
     display: flex;
 }
 #dealer{
@@ -33,6 +36,7 @@ p{
     grid-column: 3;
     grid-row: 5; 
     align-items: center;
+    justify-content: space-between;
 }
 .card{
     /* box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); */
@@ -41,6 +45,7 @@ p{
     max-width: 75px;
     max-height: 75px;
     object-fit: fill;
+    cursor: pointer;
 }
 .points{
     max-height: 50px;
@@ -51,6 +56,8 @@ p{
     border-radius: 1em;
     /* font-family: 'Aurebesh Racer AF', sans-serif; */
     object-fit: contain;
+    color: #fff;
+    background-color: #000;
 }
 .chips{
     order: 3;
@@ -62,6 +69,8 @@ p{
     border-radius: 1em;
     /* font-family: 'Aurebesh Racer AF', sans-serif; */
     object-fit: contain;
+    color: #fff;
+    background-color: #000;
 }
 .token{
     order: -1;
@@ -74,26 +83,23 @@ p{
     max-width: 100px;
     max-height: 100px;
     object-fit: fill;
-    /* align-items: center; */
 }
 #drawPile{
     grid-column: 1;
     grid-row: 3;
     content: url("../images/Back.png");
-    /* transform: rotate(90deg); */
-    /* object-fit: contain; */
+    cursor: pointer;
 }
 #spikePile{
     grid-column: 2;
     grid-row: 3;
-    /* content: url("../images/-1\ Square.png"); */
-    /* max-width: 75px; */
+    cursor: pointer;
 }
 #discardPile{
     grid-column: 1;
     grid-row: 2;
     transform: rotate(90deg);
-    /* content: url("../images/+10\ Circle.png"); */
+    cursor: none;
 }
 #diceBox{
     display: flex;
@@ -102,7 +108,7 @@ p{
 }
 #sabaccPot{
     display: flex;
-    align-items: center;
+    align-items: left;
     border: 1px solid #000;
     border-radius: 0.20em;
     grid-column: 5;
@@ -110,10 +116,12 @@ p{
     object-fit: fill;
     background-image: url("../images/Credit\ Gold.png");
     background-size: 100%;
+    font-size: 33px;
+    font-weight: bold;
 }
 #gamePot{
     display: flex;
-    align-items: center;
+    align-items: left;
     border: 1px solid #000;
     border-radius: 0.20em;
     grid-column: 5;
@@ -121,6 +129,8 @@ p{
     object-fit: fill;
     background-image: url("../images/Credit\ Silver.png");
     background-size: 100%;
+    font-size: 33px;
+    font-weight: bold;
 }
 .dice{
     box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
@@ -129,6 +139,7 @@ p{
     content: url("../images/Spike\ Die\ Side\ 1.png");
     transform: rotate(15deg);
     object-fit: contain;
+    cursor: pointer;
 }
 .token{
     max-width: 50px;
@@ -142,10 +153,14 @@ p{
     order: 3;
     max-width: 75px;
     max-height: 75px;
+    cursor: pointer;
 }
 #pBetDown, 
 #dBetDown{
     order: 3;
+    max-width: 75px;
+    max-height: 75px;
+    cursor: pointer;
 }
 #dStands{
     max-width: 75px;
@@ -155,6 +170,7 @@ p{
     text-align: center;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 #pStands{
     display: flex;
@@ -165,6 +181,7 @@ p{
     text-align: center;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 #winMsg{
     font-size: 33px;
@@ -192,7 +209,18 @@ p{
 #hadEnough{
     max-width: 75px;
     max-height: 33px;
-    content: url("../images/Credit\ Bronze.png");
+    content: url("../images/Storm\ Trooper\ Png/storm-trooper.png");
+    cursor: none;
+}
+i{
+    display: flex;
+    justify-content: flex-end;
+
+}
+audio{
+    display: flex;
+    grid-column: 3;
+    grid-row: 6;
 }
 .card.redcircles-1{
     content: url("../images/-1\ Circle.png");

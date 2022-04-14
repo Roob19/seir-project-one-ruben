@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/app.js" defer></script>
     <link href="http://fonts.cdnfonts.com/css/aurebesh-racer-af" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Corellian Spike Sabacc</title>
 </head>
 <body>
     <section>
+        <audio src="../images/17_Alien_Night_Club.mp3" controls></audio>
         <div id="dealer">
             <p id="dHandVal" class="points">points</p>
             <p id="dCardA" class="card"></p>
@@ -56,11 +58,12 @@
         <button id="dStands" type="button" class="btn btn-primary btn-sm">dStands</button>
         <button id="pStands" type="button" class="btn btn-secondary btn-sm">pStands</button>
 
-    <div id="winMsg">WINNINGWINNINGWINNING</div>
+    <div id="winMsg" class="animate__animated animate__zoominDown">WINNINGWINNINGWINNING</div>
     
         <div id="hadEnough">End Game</div>
 
-    </section>
+    <i class="fa-thin fa-barcode-read"></i>
 
+    </section>
 </body>
 </html>
