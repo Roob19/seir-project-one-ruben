@@ -57,7 +57,7 @@ p{
     /* font-family: 'Aurebesh Racer AF', sans-serif; */
     object-fit: contain;
     color: #fff;
-    background-color: #000;
+    background-color: rgba(74, 35, 15, 1);
 }
 .chips{
     order: 3;
@@ -70,7 +70,7 @@ p{
     /* font-family: 'Aurebesh Racer AF', sans-serif; */
     object-fit: contain;
     color: #fff;
-    background-color: #000;
+    background-color: rgba(74, 35, 15, 1);
 }
 .token{
     order: -1;

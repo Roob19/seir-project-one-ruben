@@ -503,11 +503,12 @@ function endGame() {
             closestToZero = twoHands[i];
         }
     }
-    if (dealerEndPoints === 0 && playerEndPoints === 0) {
+    if (dealerEndPoints === playerEndPoints) {
+        winMessage('DRAW');
+    } else if (dealerEndPoints === 0 && playerEndPoints === 0) {
         winMessage('DRAW');
     } else if (dealerEndPoints === closestToZero && playerEndPoints != closestToZero) {
         winMessage('top');
-        
     } else if (playerEndPoints === closestToZero && dealerEndPoints != closestToZero) {
         winMessage('bottom');
     } else {
