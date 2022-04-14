@@ -1,10 +1,9 @@
 *{
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 body {
     height: 90vh;
     width: 90vw;
-    /* display: flex; */
     background-image: url(../images/poker-table-green-casino-blur-background-61016762.jpeg);
     object-fit: contain;
     background-size: 100vw;
@@ -23,7 +22,6 @@ p{
 }
 #dealer{
     display: flex;
-    /* border: 1px solid #000; */
     grid-column: 3;
     grid-row: 1;
     align-items: center;
@@ -32,16 +30,12 @@ p{
 }
 #player{
     display: flex;
-    /* border: 1px solid #000; */
     grid-column: 3;
     grid-row: 5; 
     align-items: center;
     justify-content: space-between;
 }
 .card{
-    /* box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); */
-    /* border-radius: 0.20em; */
-    /* content: url("../images/Back.png"); */
     max-width: 75px;
     max-height: 75px;
     object-fit: fill;
@@ -54,7 +48,6 @@ p{
     justify-content: center;
     border: 2px solid #000;
     border-radius: 1em;
-    /* font-family: 'Aurebesh Racer AF', sans-serif; */
     object-fit: contain;
     color: #fff;
     background-color: rgba(74, 35, 15, 1);
@@ -68,7 +61,6 @@ p{
     justify-content: center;
     border: 2px solid #000;
     border-radius: 1em;
-    /* font-family: 'Aurebesh Racer AF', sans-serif; */
     object-fit: contain;
     color: #fff;
     background-color: rgba(74, 35, 15, 1);

@@ -33,6 +33,7 @@ const dBetDown = document.querySelector('#dBetDown');
 const dStands = document.querySelector('#dStands');
 const pStands = document.querySelector('#pStands');
 const endGameButton = document.querySelector('#hadEnough');
+
 //deck class constructor and methods
 class Deck {
     constructor() {
@@ -92,7 +93,7 @@ class Deck {
         this.deck.push(`gold sylops 0`, `gold sylops 0`);
     }
 }
-
+//player class an constructor for making more players
 class Player {
     constructor(){
         this.player = {
@@ -106,7 +107,8 @@ class Player {
         }
     }
 }
-//start game
+
+//start of game
 const deck1 = new Deck();
 deck1.shuffle();
 const compPlayer = new Player();
@@ -146,10 +148,10 @@ deck1.deal();
 playerOne.player.cardB = deck1.deck[deck1.deck.length-1];
 $("#pCardB").addClass(playerOne.player.cardB);
 deck1.deal();
-
+//adding the two cards freshly drawn to compPlayer
 dHand.push(compPlayer.player.cardA);
 dHand.push(compPlayer.player.cardB);
-
+//adding the two cards freshly drawn to playerOne
 pHand.push(playerOne.player.cardA);
 pHand.push(playerOne.player.cardB);
 
@@ -162,6 +164,7 @@ function startingBalance() {
 }
 setTimeout(() => {startingBalance()}, 300);
 
+//calculate the total face value of all cards in hand
 const calcHandValue = (cardsInHand) => {
     let pointsArr = [];
     let nullCount = 0;
@@ -188,6 +191,7 @@ const calcHandValue = (cardsInHand) => {
     
     return sumOfCardsInHand;
 }
+//diplaying calculated values
 $('#pHandVal').text(calcHandValue(pHand));
 $('#dHandVal').text(calcHandValue(dHand));
 
@@ -246,9 +250,8 @@ function playerDrawCardE() {
     whosTurn();
     $('#pHandVal').text(calcHandValue(pHand));
     dealerTurn()
-        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
 }
+//allows player to draw more cards from deck/draw pile
 function playerTurn() {
     if (!$(pDealerToken).hasClass('show') && playerOne.player.cardC === null) {
         drawPile.addEventListener('click', playerDrawCardC);
@@ -258,7 +261,6 @@ function playerTurn() {
         drawPile.addEventListener('click', playerDrawCardE);
     }
     setTimeout(() => {dealerTurn()}), 300;
-    // endGame();
 }
 
 //other player to draw from deck when it's their turn
@@ -315,6 +317,7 @@ function compDrawCardE() {
     $('#dHandVal').text(calcHandValue(dHand));
     playerTurn();
 }
+//allows dealer to draw more cards from deck/draw pile
 function dealerTurn() {
     if (!$(dDealerToken).hasClass('show') && compPlayer.player.cardC === null) {
         drawPile.addEventListener('click', compDrawCardC);
@@ -324,10 +327,10 @@ function dealerTurn() {
         drawPile.addEventListener('click', compDrawCardE);
     } else {
         setTimeout(() => {playerTurn()}), 300;
-        // endGame();
     }
 }
-//discard face showing up
+
+//discard pile top card showing face up
 const faceUpDiscard = [];
 function discardFunction() {
     $("#discardPile").addClass(faceUpDiscard[faceUpDiscard.length-1]);
@@ -379,6 +382,7 @@ function playerDiscardCardE() {
 }
 pCardE.addEventListener('click', playerDiscardCardE);
 
+//discard card from dHand
 function dealerDiscardCardA() {
     faceUpDiscard.push(compPlayer.player.cardA);
     compPlayer.player.cardA = null;
@@ -437,6 +441,7 @@ function rollDice() {
 rollDice();
 diceBox.addEventListener('click', rollDice);
 
+//pot values being displayed
 sabaccPotValue = 0;
 $('#sabaccPot').text(sabaccPotValue);
 gamePotValue = 0;
@@ -445,9 +450,6 @@ $('#gamePot').text(gamePotValue);
 let tempPlayerBalance = playerOne.player.credBalance;
 let tempCompBalance = compPlayer.player.credBalance;
 
-// let playerStartingBalance = 54;
-// let compStartingBalance = 54;
-
 function playerMinBet() {
     playerStartingBalance -= 2;
 }
@@ -455,6 +457,7 @@ function compMinBet() {
     compStartingBalance -= 2;
 }
 
+//buttons for betting
 function playerBetUp() {
     playerMinBet();
     $('#sabaccPot').text(sabaccPotValue += 1);
@@ -485,6 +488,7 @@ function winMessage(winner) {
     $('#winMsg').text(`${winner} is the winning hand!`);
     }
 }
+//determining winner
 function endGame() {
     const dealerEndPoints = Number($('#dHandVal').text());
         console.log(Number($('#dHandVal').text()));
@@ -516,7 +520,8 @@ function endGame() {
     }
     console.log("closest to zero "+closestToZero);
 }
-//button to stand and switch turns
+
+//buttons to "stand" and switch turns
 function topPlayerStands() {
     playerOne.player.dealerToken = false;
     compPlayer.player.dealerToken = true;
@@ -524,7 +529,6 @@ function topPlayerStands() {
     playerTurn();
 }
 dStands.addEventListener('click', topPlayerStands);
-// $('#dStands').click(topPlayerStands);
 
 function bottomPlayerStands() {
     compPlayer.player.dealerToken = false;
@@ -533,7 +537,6 @@ function bottomPlayerStands() {
     dealerTurn();
 }
 pStands.addEventListener('click', bottomPlayerStands);
-// $('#pStands').click(bottomPlayerStands);
 
-
+//hidden quick end button
 endGameButton.addEventListener('click',endGame);
