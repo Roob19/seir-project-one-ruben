@@ -97,7 +97,7 @@ class Player {
             cardC : null, 
             cardD : null,
             cardE : null, 
-            credBalance : 54, 
+            credBalance : 0, 
             dealerToken : false
         }
     }
@@ -150,9 +150,11 @@ pHand.push(playerOne.player.cardA);
 pHand.push(playerOne.player.cardB);
 
 //populate each players chip value at start
+let playerStartingBalance = 54;
+let compStartingBalance = 54;
 function startingBalance() {
-    $("#dCredBalance").text(`$${compPlayer.player.credBalance}`);
-    $("#pCredBalance").text(`$${playerOne.player.credBalance}`);
+    $("#dCredBalance").text(`$${compStartingBalance}`);
+    $("#pCredBalance").text(`$${playerStartingBalance}`);
 }
 setTimeout(() => {startingBalance()}, 300);
 
@@ -432,22 +434,32 @@ $('#sabaccPot').text(sabaccPotValue);
 gamePotValue = 0;
 $('#gamePot').text(gamePotValue);
 
-function minBet() {
-    compPlayer.player.credBalance -= 2;
+let tempPlayerBalance = playerOne.player.credBalance;
+let tempCompBalance = compPlayer.player.credBalance;
+
+// let playerStartingBalance = 54;
+// let compStartingBalance = 54;
+
+function playerMinBet() {
+    playerStartingBalance -= 2;
 }
+function compMinBet() {
+    compStartingBalance -= 2;
+}
+
 function playerBetUp() {
-    minBet();
+    playerMinBet();
     $('#sabaccPot').text(sabaccPotValue += 1);
     $('#gamePot').text(gamePotValue += 1);
-    setTimeout(() => {$('#dCreditBalance').text(playerOne.player.credBalance)}, 500);
+    setTimeout(() => {$('#dCreditBalance').text(playerStartingBalance)}, 500);
 }
 pBetUp.addEventListener('click', playerBetUp);
 
 function dealerBetUp() {
-    minBet();
+    compMinBet();
     $('#sabaccPot').text(sabaccPotValue += 1);
     $('#gamePot').text(gamePotValue += 1);
-    setTimeout(() => {$('#dCreditBalance').text(compPlayer.player.credBalance)}, 500);
+    setTimeout(() => {$('#dCreditBalance').text(tempCompBalance)}, 500);
 }
 dBetUp.addEventListener('click', dealerBetUp)
 
