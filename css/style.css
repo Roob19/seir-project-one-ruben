@@ -93,7 +93,7 @@ p{
     grid-column: 1;
     grid-row: 2;
     transform: rotate(90deg);
-    content: url("../images/+10\ Circle.png");
+    /* content: url("../images/+10\ Circle.png"); */
 }
 #diceBox{
     display: flex;
@@ -133,7 +133,14 @@ p{
 .token.show{
     content: url("../images/Sabacc\ Dealer\ Puck.png");
 }
-
+#pBetUp, 
+#dBetUp{
+    order: 3;
+}
+#pBetDown, 
+#dBetDown{
+    order: 3;
+}
 .card.redcircles-1{
     content: url("../images/-1\ Circle.png");
 }

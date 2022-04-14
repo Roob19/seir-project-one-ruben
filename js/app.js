@@ -24,7 +24,11 @@ const discardPile = document.querySelector('#discardPile');
 //money pots
 const sabaccPot = document.querySelector('#sabaccPot');
 const gamePot = document.querySelector('#gamePot');
-
+//bet buttons
+const pBetUp =document.querySelector('#pBetUp');
+const pBetDown = document.querySelector('#pBetDown');
+const dBetUp = document.querySelector('#dBetUp');
+const dBetDown = document.querySelector('#dBetDown');
 //deck class constructor and methods
 class Deck {
     constructor() {
@@ -120,9 +124,7 @@ function whosTurn() {
 }
 whosTurn();
 
-
-
-//flip top card up and place on spikePile
+//flip top card up and place on spikePile at start/load
 initialSpikeCard = deck1.deck[deck1.deck.length-1];
 $('#spikePile').addClass(initialSpikeCard);
 deck1.deal();
@@ -150,13 +152,6 @@ pHand.push(playerOne.player.cardB);
 //populate each players chip value
 $("#dCredBalance").text(`$${compPlayer.player.credBalance}`);
 $("#pCredBalance").text(`$${playerOne.player.credBalance}`);
-
-
-//discard face showing up
-const faceUpDiscard = [];
-if (faceUpDiscard[0] != null){
-    $("#discardPile").addClass(faceUpDiscard[faceUpDiscard.length]);
-}
 
 const calcHandValue = (cardsInHand) => {
     let pointsArr = [];
@@ -188,6 +183,28 @@ $('#pHandVal').text(calcHandValue(pHand));
 $('#dHandVal').text(calcHandValue(dHand));
 
 //player one to draw from deck when it's their turn
+function playerDrawCardA() {
+    playerOne.player.cardA = deck1.deck[deck1.deck.length-1];
+    $("#pCardA").addClass(playerOne.player.cardA);
+    pHand.push(playerOne.player.cardA);
+    deck1.deal();
+    compPlayer.player.dealerToken = false;
+    playerOne.player.dealerToken = true;
+    whosTurn();
+    $('#pHandVal').text(calcHandValue(pHand));
+    dealerTurn()
+}
+function playerDrawCardB() {
+    playerOne.player.cardB = deck1.deck[deck1.deck.length-1];
+    $("#pCardB").addClass(playerOne.player.cardB);
+    pHand.push(playerOne.player.cardB);
+    deck1.deal();
+    compPlayer.player.dealerToken = false;
+    playerOne.player.dealerToken = true;
+    whosTurn();
+    $('#pHandVal').text(calcHandValue(pHand));
+    dealerTurn()
+}
 function playerDrawCardC() {
     playerOne.player.cardC = deck1.deck[deck1.deck.length-1];
     $("#pCardC").addClass(playerOne.player.cardC);
@@ -198,11 +215,6 @@ function playerDrawCardC() {
     whosTurn();
     $('#pHandVal').text(calcHandValue(pHand));
     dealerTurn()
-    console.log('player cardC whos turn');
-    console.log(compPlayer.player);
-console.log(playerOne.player);
-    //     console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-    //     console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
 }
 function playerDrawCardD() {
     playerOne.player.cardD = deck1.deck[deck1.deck.length-1];
@@ -214,8 +226,6 @@ function playerDrawCardD() {
     whosTurn();
     $('#pHandVal').text(calcHandValue(pHand));
     dealerTurn()
-        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
 }
 function playerDrawCardE() {
     playerOne.player.cardE = deck1.deck[deck1.deck.length-1];
@@ -233,22 +243,37 @@ function playerDrawCardE() {
 function playerTurn() {
     if (!$(pDealerToken).hasClass('show') && playerOne.player.cardC === null) {
         drawPile.addEventListener('click', playerDrawCardC);
-            console.log('inside cardC playerOne if statement');
-            console.log('playerOne.player.cardC');
-            console.log('playerOne.player.cardC');
     } else if (!$(pDealerToken).hasClass('show') && playerOne.player.cardD === null) {
         drawPile.addEventListener('click', playerDrawCardD);
-            console.log('inside cardD playerOne if statement');
-            console.log('playerOne.player.cardD');
     } else if (!$(pDealerToken).hasClass('show') && playerOne.player.cardE === null) {
         drawPile.addEventListener('click', playerDrawCardE);
-            console.log('inside cardE playerOne if statement');
-            console.log('playerOne.player.cardE');
     }
-    dealerTurn();
+    setTimeout(() => {dealerTurn()}), 300;
 }
 
 //other player to draw from deck when it's their turn
+function compDrawCardA() {
+    compPlayer.player.cardA = deck1.deck[deck1.deck.length-1];
+    $("#dCardA").addClass(compPlayer.player.cardA);
+    dHand.push(compPlayer.player.cardA);
+    deck1.deal();
+    playerOne.player.dealerToken = false;
+    compPlayer.player.dealerToken = true;
+    whosTurn();
+    $('#dHandVal').text(calcHandValue(dHand));
+    playerTurn();
+}
+function compDrawCardB() {
+    compPlayer.player.cardB = deck1.deck[deck1.deck.length-1];
+    $("#dCardB").addClass(compPlayer.player.cardB);
+    dHand.push(compPlayer.player.cardB);
+    deck1.deal();
+    playerOne.player.dealerToken = false;
+    compPlayer.player.dealerToken = true;
+    whosTurn();
+    $('#dHandVal').text(calcHandValue(dHand));
+    playerTurn();
+}
 function compDrawCardC() {
     compPlayer.player.cardC = deck1.deck[deck1.deck.length-1];
     $("#dCardC").addClass(compPlayer.player.cardC);
@@ -258,12 +283,7 @@ function compDrawCardC() {
     compPlayer.player.dealerToken = true;
     whosTurn();
     $('#dHandVal').text(calcHandValue(dHand));
-    console.log('cardC whos turn comp');
-    playerOne.player.dealerToken = false;
-    compPlayer.player.dealerToken = true;
     playerTurn();
-        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
 }
 function compDrawCardD() {
     compPlayer.player.cardD = deck1.deck[deck1.deck.length-1];
@@ -275,8 +295,6 @@ function compDrawCardD() {
     whosTurn();
     $('#dHandVal').text(calcHandValue(dHand));
     playerTurn();
-        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
 }
 function compDrawCardE() {
     compPlayer.player.cardE = deck1.deck[deck1.deck.length-1];
@@ -286,26 +304,112 @@ function compDrawCardE() {
     whosTurn();
     $('#dHandVal').text(calcHandValue(dHand));
     playerTurn();
-        // console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-        // console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
 }
 function dealerTurn() {
     if (!$(dDealerToken).hasClass('show') && compPlayer.player.cardC === null) {
         drawPile.addEventListener('click', compDrawCardC);
-            console.log('inside cardC compPlayer');
-            console.log(compPlayer.player.cardC);
-            console.log(compPlayer.player);
-            console.log(playerOne.player);
     } else if (!$(dDealerToken).hasClass('show') && compPlayer.player.cardD === null) {
         drawPile.addEventListener('click', compDrawCardD);
-            console.log('inside cardD compPlayer');
-            console.log(compPlayer.player.cardD);
     } else if (!$(dDealerToken).hasClass('show') && compPlayer.player.cardE === null) {
         drawPile.addEventListener('click', compDrawCardE);
-            console.log('inside cardE compPlayer');
-            console.log(compPlayer.player.cardE);
     }
 }
+//discard face showing up
+const faceUpDiscard = [];
+function discardFunction() {
+    $("#discardPile").addClass(faceUpDiscard[faceUpDiscard.length-1]);
+}
+
+//discard card from pHand
+function playerDiscardCardA() {
+    faceUpDiscard.push(playerOne.player.cardA);
+    playerOne.player.cardA = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {playerDrawCardA()}, 500);
+    setTimeout(() => {dealerTurn()}, 700);
+}
+pCardA.addEventListener('click', playerDiscardCardA);
+
+function playerDiscardCardB() {
+    faceUpDiscard.push(playerOne.player.cardB);
+    playerOne.player.cardB = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {playerDrawCardB()}, 500);
+    setTimeout(() => {dealerTurn()}, 700);
+}
+pCardB.addEventListener('click', playerDiscardCardB);
+
+function playerDiscardCardC() {
+    faceUpDiscard.push(playerOne.player.cardC);
+    playerOne.player.cardC = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {playerDrawCardC()}, 500);
+    setTimeout(() => {dealerTurn()}, 700);
+}
+pCardC.addEventListener('click', playerDiscardCardC);
+
+function playerDiscardCardD() {
+    faceUpDiscard.push(playerOne.player.cardD);
+    playerOne.player.cardC = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {playerDrawCardD()}, 500);
+    setTimeout(() => {dealerTurn()}, 700);
+}
+pCardD.addEventListener('click', playerDiscardCardD);
+
+function playerDiscardCardE() {
+    faceUpDiscard.push(playerOne.player.cardE);
+    playerOne.player.cardE = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {playerDrawCardE()}, 500);
+    setTimeout(() => {dealerTurn()}, 700);
+}
+pCardE.addEventListener('click', playerDiscardCardE);
+
+function dealerDiscardCardA() {
+    faceUpDiscard.push(compPlayer.player.cardA);
+    compPlayer.player.cardA = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {compDrawCardA()}, 500);
+    setTimeout(() => {playerTurn()}, 700);
+}
+dCardA.addEventListener('click', dealerDiscardCardA);
+
+function dealerDiscardCardB() {
+    faceUpDiscard.push(compPlayer.player.cardB);
+    compPlayer.player.cardB = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {compDrawCardB()}, 500);
+    setTimeout(() => {playerTurn()}, 700);
+}
+dCardB.addEventListener('click', dealerDiscardCardB);
+
+function dealerDiscardCardC() {
+    faceUpDiscard.push(compPlayer.player.cardC);
+    compPlayer.player.cardC = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {compDrawCardC()}, 500);
+    setTimeout(() => {playerTurn()}, 700);
+}
+dCardC.addEventListener('click', dealerDiscardCardC);
+
+function dealerDiscardCardD() {
+    faceUpDiscard.push(compPlayer.player.cardD);
+    compPlayer.player.cardC = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {compDrawCardD()}, 500);
+    setTimeout(() => {playerTurn()}, 700);
+}
+dCardD.addEventListener('click', dealerDiscardCardD);
+
+function dealerDiscardCardE() {
+    faceUpDiscard.push(compPlayer.player.cardE);
+    compPlayer.player.cardE = null;
+    setTimeout(() => {discardFunction()}, 300);
+    setTimeout(() => {compDrawCardE()}, 500);
+    setTimeout(() => {playerTurn()}, 700);
+}
+dCardE.addEventListener('click', dealerDiscardCardE);
 
 //dice rolling mechanic
 const diceSides = ['sideOne', 'sideTwo', 'sideThree', 'sideFour', 'sideFive', 'sideSix'];
@@ -317,12 +421,21 @@ function rollDice() {
     $("#dice2").addClass(diceSides[randomB]);
         console.log(`Dice two roll: ${randomB}`);
 }
+rollDice();
 diceBox.addEventListener('click', rollDice);
 
+function playerBetUp() {
+    playerOne.player.credBalance -= 1;
+    const sabaccPot = document.querySelector('#sabaccPot');
+    const gamePot = document.querySelector('#gamePot');
+}
 
+function dealerBetUp() {
+    compPlayer.player.credBalance
+}
 console.log(dHand);
 console.log(pHand);
 // console.log(compPlayer.player);
 // console.log(playerOne.player);
-console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+// console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
+// console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
