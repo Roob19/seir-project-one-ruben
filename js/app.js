@@ -29,6 +29,10 @@ const pBetUp =document.querySelector('#pBetUp');
 const pBetDown = document.querySelector('#pBetDown');
 const dBetUp = document.querySelector('#dBetUp');
 const dBetDown = document.querySelector('#dBetDown');
+//stand buttons
+const dStands = document.querySelector('#dStands');
+const pStands = document.querySelector('#pStands');
+const endGameButton = document.querySelector('#hadEnough');
 //deck class constructor and methods
 class Deck {
     constructor() {
@@ -254,6 +258,7 @@ function playerTurn() {
         drawPile.addEventListener('click', playerDrawCardE);
     }
     setTimeout(() => {dealerTurn()}), 300;
+    // endGame();
 }
 
 //other player to draw from deck when it's their turn
@@ -317,6 +322,9 @@ function dealerTurn() {
         drawPile.addEventListener('click', compDrawCardD);
     } else if (!$(dDealerToken).hasClass('show') && compPlayer.player.cardE === null) {
         drawPile.addEventListener('click', compDrawCardE);
+    } else {
+        setTimeout(() => {playerTurn()}), 300;
+        // endGame();
     }
 }
 //discard face showing up
@@ -463,9 +471,68 @@ function dealerBetUp() {
 }
 dBetUp.addEventListener('click', dealerBetUp)
 
-console.log(dHand);
-console.log(pHand);
-// console.log(compPlayer.player);
-// console.log(playerOne.player);
-// console.log(`dealer classes: ${$('#dDealerToken').attr('class')}`);
-// console.log(`player classes: ${$('#pDealerToken').attr('class')}`);
+//end game calc and win message
+function winMessage(winner) {
+    $('#winMsg').remove('hidden');
+    $('winMsg').addClass('stayOn');
+    if (winner === 'top') {
+    $('#winMsg').text('TOP PLAYER WINS');
+    } else if ( winner === 'bottom') {
+    $('#winMsg').text('BOTTOM PLAYER WINS');
+    } else if (winner === 'DRAW') {
+    $('#winMsg').text(`${winner}! roll dice to determine winner.`);
+    } else {
+    $('#winMsg').text(`${winner} is the winning hand!`);
+    }
+}
+function endGame() {
+    const dealerEndPoints = Number($('#dHandVal').text());
+        console.log(Number($('#dHandVal').text()));
+    const playerEndPoints = Number($('#pHandVal').text());
+        console.log(Number($('#pHandVal').text()));
+
+    const twoHands =[dealerEndPoints, playerEndPoints];
+        console.log(twoHands);
+    let closestToZero = 0;
+    for (let i=0; i<twoHands.length; i++) {
+        if (closestToZero === 0){
+            closestToZero = twoHands[i];
+        } else if (twoHands[i] > 0 && twoHands[i] <= Math.abs(closestToZero)) {
+            closestToZero = twoHands[i];
+        } else if (twoHands[i] < 0 && - twoHands[i] < Math.abs(closestToZero)) {
+            closestToZero = twoHands[i];
+        }
+    }
+    if (dealerEndPoints === 0 && playerEndPoints === 0) {
+        winMessage('DRAW');
+    } else if (dealerEndPoints === closestToZero && playerEndPoints != closestToZero) {
+        winMessage('top');
+        
+    } else if (playerEndPoints === closestToZero && dealerEndPoints != closestToZero) {
+        winMessage('bottom');
+    } else {
+        winMessage(closestToZero)
+    }
+    console.log("closest to zero "+closestToZero);
+}
+//button to stand and switch turns
+function topPlayerStands() {
+    playerOne.player.dealerToken = false;
+    compPlayer.player.dealerToken = true;
+    whosTurn();
+    playerTurn();
+}
+dStands.addEventListener('click', topPlayerStands);
+// $('#dStands').click(topPlayerStands);
+
+function bottomPlayerStands() {
+    compPlayer.player.dealerToken = false;
+    playerOne.player.dealerToken = true;
+    whosTurn();
+    dealerTurn();
+}
+pStands.addEventListener('click', bottomPlayerStands);
+// $('#pStands').click(bottomPlayerStands);
+
+
+endGameButton.addEventListener('click',endGame);

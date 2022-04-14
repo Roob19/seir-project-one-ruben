@@ -108,6 +108,8 @@ p{
     grid-column: 5;
     grid-row: 2;
     object-fit: fill;
+    background-image: url("../images/Credit\ Gold.png");
+    background-size: 100%;
 }
 #gamePot{
     display: flex;
@@ -117,6 +119,8 @@ p{
     grid-column: 5;
     grid-row: 3;
     object-fit: fill;
+    background-image: url("../images/Credit\ Silver.png");
+    background-size: 100%;
 }
 .dice{
     box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
@@ -136,12 +140,60 @@ p{
 #pBetUp, 
 #dBetUp{
     order: 3;
+    max-width: 75px;
+    max-height: 75px;
 }
 #pBetDown, 
 #dBetDown{
     order: 3;
 }
-
+#dStands{
+    max-width: 75px;
+    max-height: 30px;
+    grid-column: 3;
+    grid-row: 2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#pStands{
+    display: flex;
+    max-width: 75px;
+    max-height: 30px;
+    grid-column: 3;
+    grid-row: 4;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#winMsg{
+    font-size: 33px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+    margin: auto;
+    width: auto;
+    grid-column: 3;
+    grid-row: 3;
+}
+.hidden{
+    display: none;
+}
+.hidden.stayOn{
+    display: flex;
+}
+.stayOn{
+    display: flex;
+}
+#hadEnough{
+    max-width: 75px;
+    max-height: 33px;
+    content: url("../images/Credit\ Bronze.png");
+}
 .card.redcircles-1{
     content: url("../images/-1\ Circle.png");
 }
