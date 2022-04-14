@@ -58,6 +58,7 @@ p{
     object-fit: contain;
     color: #fff;
     background-color: rgba(74, 35, 15, 1);
+    font-size: 1.2em;
 }
 .chips{
     order: 3;
@@ -71,6 +72,7 @@ p{
     object-fit: contain;
     color: #fff;
     background-color: rgba(74, 35, 15, 1);
+    font-size: 1.2em;
 }
 .token{
     order: -1;
@@ -116,6 +118,7 @@ p{
     object-fit: fill;
     background-image: url("../images/Credit\ Gold.png");
     background-size: 100%;
+    background-repeat: no-repeat;
     font-size: 33px;
     font-weight: bold;
 }
@@ -129,11 +132,12 @@ p{
     object-fit: fill;
     background-image: url("../images/Credit\ Silver.png");
     background-size: 100%;
+    background-repeat: no-repeat;
     font-size: 33px;
     font-weight: bold;
 }
 .dice{
-    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
+    box-shadow: 5px 5px 3px 0 rgba(41, 41, 41, 0.75);
     max-width: 33px;
     max-height: 33px;
     content: url("../images/Spike\ Die\ Side\ 1.png");
@@ -144,6 +148,7 @@ p{
 .token{
     max-width: 50px;
     max-height: 50px;
+    box-shadow: 5px 5px 3px 0 rgba(41, 41, 41, 0.75);
 }
 .token.show{
     content: url("../images/Sabacc\ Dealer\ Puck.png");
@@ -177,7 +182,7 @@ p{
     max-width: 75px;
     max-height: 30px;
     grid-column: 3;
-    grid-row: 4;
+    grid-row: 5;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -196,6 +201,8 @@ p{
     width: auto;
     grid-column: 3;
     grid-row: 3;
+    color: green;
+    text-shadow: 2px 2px gold;
 }
 .hidden{
     display: none;
