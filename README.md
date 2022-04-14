@@ -152,6 +152,10 @@ Single Blind Draw:
 
 >**Nathan Mausert** - https://coffeegremlin.com/
 
+>**Hayk Mnatsakanyan** - https://github.com/Zoneam
+
+>**John McCants** - https://github.com/johnmccants002
+
 >**William Vincent** - https://wsvincent.com/javascript-object-oriented-deck-cards/ 
 
 >**Mike Bostock** - https://bost.ocks.org/mike/shuffle/ 
