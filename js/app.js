@@ -68,7 +68,7 @@ class Deck {
         }
         return this;
     }
-    //removes one card from created deck
+    //removes one card from top of created deck
     deal() {
         return this.deck.pop();
     }
@@ -93,7 +93,7 @@ class Deck {
         this.deck.push(`gold sylops 0`, `gold sylops 0`);
     }
 }
-//player class an constructor for making more players
+//player class an constructor for making more players //my folly
 class Player {
     constructor(){
         this.player = {
@@ -168,7 +168,7 @@ setTimeout(() => {startingBalance()}, 300);
 const calcHandValue = (cardsInHand) => {
     let pointsArr = [];
     let nullCount = 0;
-    const negSingleSearch = /-\d/g;
+    const negSingleSearch = /-\d/g; //regex flex 🦾
     const negDoubleSearch = /-\d\d/g;
     const posSingleSearch = /\d/g;
     const posDoubleSearch = /\d\d/g;
@@ -495,8 +495,7 @@ function endGame() {
     const playerEndPoints = Number($('#pHandVal').text());
         console.log(Number($('#pHandVal').text()));
 
-    const twoHands =[dealerEndPoints, playerEndPoints];
-        console.log(twoHands);
+    const twoHands =[dealerEndPoints, playerEndPoints];//used in meteorology
     let closestToZero = 0;
     for (let i=0; i<twoHands.length; i++) {
         if (closestToZero === 0){

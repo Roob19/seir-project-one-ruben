@@ -2,6 +2,7 @@
 <h2 align="center">This project is for educational purposes only and is a work in progress. </h2>
 
 ___
+
 ## My first project:
 
 <h3 align="left">Technologies used: </h3>
