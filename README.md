@@ -34,7 +34,7 @@ Corellian Spike is a variant on Sabacc, a card game played throughout the fictio
 
 ___
 
-<p align="center"><img src="https://media.giphy.com/media/ek2fpwckr4uis/giphy.gif" border="10"/></p>
+<p align="center"><img src="https://media.giphy.com/media/ek2fpwckr4uis/giphy.gif" height="300" border="10"/></p>
 
 ___
 Corellian Spike uses a 62-card deck and two six-sided dice. 
