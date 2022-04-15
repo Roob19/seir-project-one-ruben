@@ -1,7 +1,7 @@
 All reused work maintains its original copyright where applicable and is used here with the assertion that it is fair use of the material under United States copyright law. Original text and images are licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-https://en.wikipedia.org/wiki/Fair_use
-https://en.wikipedia.org/wiki/Copyright_law_of_the_United_States
-http://creativecommons.org/licenses/by-sa/4.0/
+<br>https://en.wikipedia.org/wiki/Fair_use
+<br>https://en.wikipedia.org/wiki/Copyright_law_of_the_United_States
+<br>http://creativecommons.org/licenses/by-sa/4.0/
 
 
 
