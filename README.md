@@ -24,7 +24,7 @@ ___
 
 ___
 
-<p align="center">Screen Shot: <img src="../images/Screen\ Shot\ 2022-04-15" border="10"></p>
+<p align="center">Screen Shot: <img src="../images/Screen\ Shot\ 2022-04-15" border="10"/></p>
 
 ___
 
