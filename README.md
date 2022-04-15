@@ -1,10 +1,21 @@
-# seir-project-one-ruben
-### This project is for educational purposes only and is a work in progress. 
+<h1 align="center">seir-project-one-ruben</h1>
+<h2 align="center">This project is for educational purposes only and is a work in progress. </h2>
 
-
+___
 ## My first project:
 
-![Vandor-1](https://static.wikia.nocookie.net/starwars/images/c/c1/SoloAdaptation3-CoverArt.jpg/revision/latest/scale-to-width-down/500?cb=20190719033302)
+<h3 align="center">Technologies used: </h3>
+
+|   [HTML 5](https://whatwg.org/)    |   [CSS 3](https://www.w3.org/TR/CSS/#css)    |   [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)  |   [JQuery](https://jquery.com/)  |
+|:----------:|:--------:|:-------------:|:---------:|
+|   [GitHub](https://github.com/)  |   [BASH script](https://www.gnu.org/software/bash/) |   [Bootstrap](https://getbootstrap.com/docs/5.1/examples/)   |   [Whimsical](https://whimsical.com)   |
+|   [Trello](https://trello.com)  |   [Netlify](https://netlify.com) |   [PNG images](https://en.wikipedia.org/wiki/Portable_Network_Graphics)  |   [MP3 audio](https://en.wikipedia.org/wiki/MP3)   |
+|   [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)    |   [Stack Overflow](https://stackoverflow.com/)  |   [Slack](https://slack.com)   |   [ZOOM](https://zoom.us)    |
+
+___
+<p align="center"><img src="https://static.wikia.nocookie.net/starwars/images/c/c1/SoloAdaptation3-CoverArt.jpg/revision/latest/scale-to-width-down/500?cb=20190719033302" border="10"/></p>
+
+___
 
 # **Corellian Spike**
 
@@ -13,8 +24,13 @@ https://gilded-capybara-a141c7.netlify.app/
 
 Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
 
-The same card game and variation where `Han Solo` won the `Milenium Falcon` from `Lando Calrissian` on Vandor-1. 
+<samp>The same card game and variation where `Han Solo` won the `Milenium Falcon` from `Lando Calrissian` on Vandor-1. </samp>
 
+___
+
+<p align="center"><img src="https://media.giphy.com/media/ek2fpwckr4uis/giphy.gif" border="10"/></p>
+
+___
 Corellian Spike uses a 62-card deck and two six-sided dice. 
     "The deck comprises of: "
 -    10 green, circle suited cards, with values of 1-10. 
