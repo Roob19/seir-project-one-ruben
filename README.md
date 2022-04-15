@@ -8,7 +8,8 @@ ___
 
 |   [HTML 5](https://whatwg.org/)    |   [CSS 3](https://www.w3.org/TR/CSS/#css)    |   [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)  |   [JQuery](https://jquery.com/)  |
 |:----------:|:--------:|:-------------:|:---------:|
-|   [GitHub](https://github.com/)  |   [BASH script](https://www.gnu.org/software/bash/) |   [Bootstrap](https://getbootstrap.com/docs/5.1/examples/)   |   [Whimsical](https://whimsical.com)   |   [Trello](https://trello.com)  |   [Netlify](https://netlify.com) |   [PNG images](https://en.wikipedia.org/wiki/Portable_Network_Graphics)  |   [MP3 audio](https://en.wikipedia.org/wiki/MP3)   |
+|   [GitHub](https://github.com/)  |   [BASH script](https://www.gnu.org/software/bash/) |   [Bootstrap](https://getbootstrap.com/docs/5.1/examples/)   |   [Whimsical](https://whimsical.com)   |
+|   [Trello](https://trello.com)  |   [Netlify](https://netlify.com) |   [PNG images](https://en.wikipedia.org/wiki/Portable_Network_Graphics)  |   [MP3 audio](https://en.wikipedia.org/wiki/MP3)   |
 |   [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)    |   [Stack Overflow](https://stackoverflow.com/)  |   [Slack](https://slack.com)   |   [ZOOM](https://zoom.us)    |
 
 ___
