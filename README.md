@@ -19,7 +19,7 @@ ___
 
 # **Corellian Spike**
 
-https://gilded-capybara-a141c7.netlify.app/
+[Link to Game](https://gilded-capybara-a141c7.netlify.app/)
 
 
 Corellian Spike is a variant on Sabacc, a card game played throughout the fictional Star Wars Galaxy. 
