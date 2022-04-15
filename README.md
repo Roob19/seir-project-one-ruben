@@ -14,7 +14,7 @@ ___
 
 ___
 
-<p align="center">Screen Shot: <img src="https://static.wikia.nocookie.net/starwars/images/c/c1/SoloAdaptation3-CoverArt.jpg/revision/latest/scale-to-width-down/500?cb=20190719033302" border="10"/></p>
+<p align="center"><img src="https://static.wikia.nocookie.net/starwars/images/c/c1/SoloAdaptation3-CoverArt.jpg/revision/latest/scale-to-width-down/500?cb=20190719033302" border="10"/></p>
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 ___
 
-<p align="center"><img src="../images/Screen\ Shot\ 2022-04-15" border="10"></p>
+<p align="center">Screen Shot: <img src="../images/Screen\ Shot\ 2022-04-15" border="10"></p>
 
 ___
 
