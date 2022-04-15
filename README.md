@@ -20,7 +20,7 @@ ___
 
 # **Corellian Spike**
 
-[Link to Game](https://gilded-capybara-a141c7.netlify.app/)
+[Link to current state of Game](https://gilded-capybara-a141c7.netlify.app/)
 
 ___
 
