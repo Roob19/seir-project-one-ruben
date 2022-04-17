@@ -105,6 +105,22 @@ class Player {
             credBalance : 0, 
             dealerToken : false
         }
+        const hand = [this.player.cardA, this.player.cardB, this.cardC, this.cardD, this.cardE];
+    }
+    switchTurns() {
+        if (this.player.dealerToken === true) {
+            this.player.dealerToken = false;
+        } else {
+            this.player.dealerToken = true;
+        }
+    }
+    dealCard() {
+        this.player.hand.forEach(element => {
+            if (element === null) {
+                element = deck1.deck[deck1.deck.length-1];
+                deck1.deal();
+            }
+        });
     }
 }
 
