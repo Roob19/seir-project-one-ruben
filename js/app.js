@@ -114,10 +114,23 @@ class Player {
             this.player.dealerToken = true;
         }
     }
-    dealCard() {
+    dealSingleCard() {
         const openCardSlot = this.player.hand.find(element => element === null);
         if (openCardSlot) {
-            this.player.hand.push(deck1.deck[deck1.deck.length-1]);        
+            this.player.hand.push(deck1.deck[deck1.deck.length-1]);
+            deck1.deal();
+        }
+    }
+    //when spike dice match faces, count cards in hand, dicard hand, and deal amount of cards discarded
+    spikeRollDeal() {
+        let numOfCardsInHand = 0;
+        this.player.hand.forEach((element) => {
+            if (element != null) {
+            numOfCardsInHand += 1
+            }
+        });
+        while (numOfCardsInHand > 0) {
+            this.player.hand.push(deck1.deck[deck1.deck.length-1]);
             deck1.deal();
         }
     }
