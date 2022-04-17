@@ -103,9 +103,9 @@ class Player {
             cardD : null,
             cardE : null, 
             credBalance : 0, 
-            dealerToken : false
+            dealerToken : false,
+            hand : [this.player.cardA, this.player.cardB, this.cardC, this.cardD, this.cardE]
         }
-        const hand = [this.player.cardA, this.player.cardB, this.cardC, this.cardD, this.cardE];
     }
     switchTurns() {
         if (this.player.dealerToken === true) {
