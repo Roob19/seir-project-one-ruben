@@ -115,12 +115,11 @@ class Player {
         }
     }
     dealCard() {
-        this.player.hand.forEach(element => {
-            if (element === null) {
-                element = deck1.deck[deck1.deck.length-1];
-                deck1.deal();
-            }
-        });
+        const openCardSlot = this.player.hand.find(element => element === null);
+        if (openCardSlot) {
+            this.player.hand.push(deck1.deck[deck1.deck.length-1]);        
+            deck1.deal();
+        }
     }
 }
 
