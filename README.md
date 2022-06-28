@@ -201,4 +201,4 @@ Single Blind Draw:
 >**The city of Rancho Cordova** - https://www.cityofranchocordova.org/
 
 
-<p align="center"><img src="https://imgur.com/cNRzr9i" height="300" border="10"/></p>
+<p align="center"><img src="https://i.imgur.com/cNRzr9i.png" height="300" border="10"/></p>
